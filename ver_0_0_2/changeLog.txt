@@ -1,0 +1,3 @@
+- Implemented a Skybox (Proof of concept)
+- Added a resources folder, so that we can explain where we have used not-owned assets
+- Added a section to documentation about the Skybox  
