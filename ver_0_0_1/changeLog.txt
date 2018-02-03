@@ -1,0 +1,7 @@
+- Reduced Movement Speed of camera
+- Implemented proof of concept Lighting
+	- 4 light sources around the object, are shown as spheres
+	- Light source is of type Point Light (consult three.js documentation)
+- Maximized the canvas area
+- Implemeted resize functionality. When the browser windo is resized the canvas
+  will resize as well, maintaining its aspect ratio
