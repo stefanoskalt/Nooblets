@@ -1,0 +1,11 @@
+- First working version of collision has been iimplemented
+	- Cast a ray. 
+	- It returns an array of its results If it hits an object (contained to the modelsCollision) 
+	- If it hits an object it will show "HIT!" in the top of the screen
+	Note: The only model it has collusion is the desk
+- Modularity:
+	- Each model can be loaded by calling the loadModel() function 
+-Refactoring:
+	- All models will now be loaded from the loadAllModels() function
+- Implemented a crosshair to show the camera direction. This crosshair can show us 
+  where the ray is casting to and thus we can aim it to the object and test it
