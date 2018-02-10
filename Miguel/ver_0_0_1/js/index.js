@@ -409,7 +409,7 @@ function loadAllLights(){
 			'y' : 15.0,
 			'z' : 1
 		},
-		'showLight' : {      // what is this?
+		'showLight' : {      // (for helpers, but not needed)
 			'size': 1,
 			'color' : 0x404040
 		},
@@ -417,33 +417,44 @@ function loadAllLights(){
 		'groundColor' : 0x080820  // Optional: HemisphereLight
 	};
 
-	var AmbientLight = { // works well
+	var AmbientLight = { // works
 		'type' : 'AmbientLight',
 		'color' : '#ff0000',
 		'intensity' : '2'
 	}
 
-	var PointLight = { // works without if statements
+	var PointLight = { // works
 		'type' : 'PointLight',
-		'color' : '#ff0000', 
+		'color' : '#ff0000',
+		'intensity' : '5', 
 		'distance' : '50',
-		'decay' : '2',
-		'size' : '2'
+		'decay' : '1',
+		'size' : '2',
+		'position' : { 
+			'x' : 0,
+			'y' : -40,
+			'z' : 1
+		},
 	}
 
-	var DirectionalLight = { // needs some fixing with position and target
+	var DirectionalLight = { // works
 		'type' : 'DirectionalLight',
 		'color' : '#ff0000',
 		'intensity' : '5',
 		'size' : '2',
-		'target' : { //why doesn't target work???
+		'position' : { 
 			'x' : 0,
+			'y' : 6,
+			'z' : 30
+		},
+		'target' : { // works but the helper does not point to the correct direction
+			'x' : -30,
 			'y' : 5,
 			'z' : 0
 		}
 	}
 
-	var HemisphereLight = {  // works
+	var HemisphereLights = {  // works
 		'type' : 'HemisphereLight',
 		'skyColor' : '#ff0000',
 		'groundColor' : '#0000FF',
@@ -451,19 +462,19 @@ function loadAllLights(){
 		'size' : '2',
 	}
 
-	var SpotLight = { // needs fix with position
+	var SpotLight = { // Works
 		'type' : 'SpotLight',
 		'color' : '#ff0000',
 		'intensity' : '20',
 		'distance' : '40',
 		'angle' : '10',
 		'penumbra' : '0.5',
-		'decay' : '1'
-		//'position' : { // how do i set position?
-		//	'x' : 0,
-		//	'y' : 6,
-		//	'z' : 1
-		//}
+		'decay' : '1',
+		'position' : { 
+			'x' : 0,
+			'y' : 6,
+			'z' : 1
+		}
 	}
 	createLight (DirectionalLight);
 }
@@ -476,27 +487,19 @@ function createLight(lightObj) {
 		break;
 
 		case "PointLight" : // light emitted from single point in all directions
-			//if (lightObj.color && lightObj.intensity){
-				var light = new THREE.PointLight(lightObj.color, lightObj.intensity, lightObj.distance, lightObj.decay); // only works without the 'if statements'
-			//}
-			//else if (lightObj.intensity){
-			//	var light = new THREE.PointLight(lightObj.intensity, lightObj.distance, lightObj.decay);
-			//}
-			//else if (lightObj.color){
-			//	var light = new THREE.PointLight(lightObj.color, lightObj.distance, lightObj.decay);
-			//} else {
-			//	var light = new THREE.PointLight(lightObj.distance, lightObj.decay);
-			//}
+			var light = new THREE.PointLight(lightObj.color, lightObj.intensity, lightObj.distance, lightObj.decay); // only works without the 'if statements'
+			light.position.set(lightObj.position.x, lightObj.position.y, lightObj.position.z);
 			scene.add(light);
 			var sphereSize = lightObj.size; // not ligObj.showLight.size
 			var pointLightHelper = new THREE.PointLightHelper(light, sphereSize);
 			scene.add(pointLightHelper);
-		break;// soft white light
-
+		break;
 		case "DirectionalLight" : // light that gets emitted in a specific direction (has position and target)
 			var light = new THREE.DirectionalLight( lightObj.color, lightObj.intensity, lightObj.target.x, lightObj.target.y, lightObj.target.z  ); // how do i select target coordinates?
+			light.position.set(lightObj.position.x, lightObj.position.y, lightObj.position.z);
+			light.target.position.set(lightObj.target.x, lightObj.target.y, lightObj.target.z);
 			scene.add(light);
-			scene.add(light.target); // THREE documentation says need to add light target to scene (my target doesnt work)
+			scene.add(light.target); // THREE documentation says need to add light target to scene
 			var planeSize = lightObj.size;
 			var directionalLightHelper = new THREE.DirectionalLightHelper(light, planeSize);
 			scene.add(directionalLightHelper);
@@ -510,7 +513,7 @@ function createLight(lightObj) {
 		break;
 		case "SpotLight" : // light emitted from a single point in one direction, along a cone
 			var light = new THREE.SpotLight( lightObj.color, lightObj.intensity, lightObj.distance, lightObj.angle, lightObj.penumbra, lightObj.decay ); // spotlight shining from the side
-			//light.position.set(lightObj.position.x, lightObj.position.y, lightObj.position.z);        // how do i set position?
+			light.position.set(lightObj.position.x, lightObj.position.y, lightObj.position.z);
 			//lightObj.position.set(lightObj.position.x, lightObj.position.y, lightObj.position.z);
 			scene.add(light);
 			var spotLightHelper = new THREE.SpotLightHelper( light );
