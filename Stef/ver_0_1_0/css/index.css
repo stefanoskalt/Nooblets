@@ -1,0 +1,15 @@
+html, body {
+	margin: 0;
+	height:100%;
+	width: 100%;
+	overflow: hidden;
+}
+#log {
+position: absolute;
+	height: 100px;
+	width: 300px;
+	top: 0px;
+	right: 300px;
+	font-size: 40px;
+	background-color: gray;
+}
