@@ -1,4 +1,4 @@
 -Forward/Backward collision implemented. Left/Right cannot be implemented at the moment
 -Extremely complex function created: prepareLightParameters for preparing default light parameters and merge
 	user provided and default parameters
--modified a bit Miguel's createLight function to accomodate the new function 
+-modified a bit Miguel's createLight function to accomodate the new function

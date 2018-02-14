@@ -1,0 +1,7 @@
+- Added a xml file to hold the objects description (resources/xml)
+- Added seperate javascript file which holds functions for connecting to xml file and retrieving the
+  description for a specific object
+
+Documentation:
+- Added documentation about the new light functions (createLight, loadAllLights). 
+- Added a table holding the default properties and values for each type of light 

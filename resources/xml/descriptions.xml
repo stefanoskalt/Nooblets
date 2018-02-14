@@ -1,0 +1,15 @@
+<?xml version = "1.0"?>
+<Obect-Description>
+    <object>
+        <name>Knife</name>
+        <description>A small kitchen knife. It seems it has been washed recently</description>
+    </object>
+    <object>
+    	<name>Table</name>
+    	<description>Old table with some blood spots on it</description>
+    </object>
+    <object>
+    	<name>Sofa</name>
+    	<description>Luxurious sofa with some small blood trail on it</description>
+    </object>
+</Obect-Description>
