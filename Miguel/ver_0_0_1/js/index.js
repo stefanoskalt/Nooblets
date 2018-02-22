@@ -339,6 +339,18 @@ function loadAllModels() {
 		'scale': 10.0
 	};
 	loadModel(loadDesk);
+
+	var loadFan = {
+		'modelPath': 'models/ceilingFan.dae',
+		'collision': true,
+		'position': {
+			'x': 0,
+			'y': -50,
+			'z': 50
+		},
+		'scale': 1.0
+	};
+	loadModel(loadFan);
 }
 
 
@@ -439,7 +451,7 @@ function loadAllLights(){
 
 	var DirectionalLight = { // works
 		'type' : 'DirectionalLight',
-		'color' : '#ff0000',
+		//'color' : '#ff0000',
 		'intensity' : '5',
 		'size' : '2',
 		'position' : { 
