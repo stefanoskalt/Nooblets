@@ -188,7 +188,7 @@ function init() {
 	controls.activeLook = true;
 
 	/*----------------------START JUMP FUNCTIONALITY------------------*/
-	/*controls.noFly = true; //Cant Fly
+	/*controls.noFly = false; //Cant Fly
 	raycasterJump = new THREE.Raycaster(new THREE.Vector3(), new THREE.Vector3(0,-1,0), 0, 10);*/
 	/*----------------------END JUMP FUNCTIONALITY------------------*/
 

@@ -1,0 +1,2 @@
+-Animation functionality implemented. No extra parameters required when loading a model with animation
+-Jump functionality implemented. By default is turned off. To turn it on, consult Documentation
