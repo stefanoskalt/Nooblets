@@ -5,8 +5,8 @@
       <author>Liam</author>
       <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.6;  Revision: 62</authoring_tool>
     </contributor>
-    <created>2018-03-04T15:58:02</created>
-    <modified>2018-03-04T15:58:02</modified>
+    <created>2018-03-04T16:12:43</created>
+    <modified>2018-03-04T16:12:43</modified>
     <unit name="inch" meter="0.0254"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -355,33 +355,6 @@
         </ambient>
       </technique_common>
     </light>
-    <light id="Point-light" name="Point">
-      <technique_common>
-        <point>
-          <color>1 1 1</color>
-          <constant_attenuation>0</constant_attenuation>
-          <linear_attenuation>0</linear_attenuation>
-          <quadratic_attenuation>1</quadratic_attenuation>
-        </point>
-      </technique_common>
-      <extra>
-        <technique profile="OpenCOLLADA3dsMax">
-          <max_light>
-            <affect_specular sid="affect_specular" type="int">1</affect_specular>
-            <affect_diffuse sid="affect_diffuse" type="int">1</affect_diffuse>
-            <decay_type sid="decay_type" type="int">2</decay_type>
-            <multiplier sid="multiplier" type="float">1</multiplier>
-            <decay_radius sid="decay_radius" type="float">2500</decay_radius>
-            <use_near_attenuation sid="use_near_attenuation" type="bool">0</use_near_attenuation>
-            <use_far_attenuation sid="use_far_attenuation" type="bool">0</use_far_attenuation>
-            <attenuation_near_start sid="attenuation_near_start" type="float">0</attenuation_near_start>
-            <attenuation_near_end sid="attenuation_near_end" type="float">0</attenuation_near_end>
-            <attenuation_far_start sid="attenuation_far_start" type="float">0</attenuation_far_start>
-            <attenuation_far_end sid="attenuation_far_end" type="float">0</attenuation_far_end>
-          </max_light>
-        </technique>
-      </extra>
-    </light>
   </library_lights>
   <library_images>
     <image id="_024px-Balsa_Wood_Texture_jpg">
@@ -396,29 +369,17 @@
       <node name="EnvironmentAmbientLight">
         <instance_light url="#EnvironmentAmbientLight"/>
       </node>
-      <node id="node-Point" name="Point">
-        <matrix>39.37008 0 0 -48.41676 0 7.66564e-6 -39.37008 3.813923 0 39.37008 7.66564e-6 31.71303 0 0 0 1</matrix>
-        <instance_light url="#Point-light"/>
-        <extra>
-          <technique profile="OpenCOLLADA">
-            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
-            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
-            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
-            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
-          </technique>
-        </extra>
-      </node>
       <node id="node-Cube" name="Cube">
         <matrix>39.37008 0 0 0 0 39.37008 6.4142e-6 0 0 -6.4142e-6 39.37008 0 0 0 0 1</matrix>
         <instance_geometry url="#geom-Cube">
           <bind_material>
             <technique_common>
-              <instance_material symbol="Material.001" target="#Material.001-material">
+              <instance_material symbol="Material.003" target="#Material.003-material"/>
+              <instance_material symbol="Material.002" target="#Material.002-material">
                 <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
               </instance_material>
               <instance_material symbol="Material.004" target="#Material.004-material"/>
-              <instance_material symbol="Material.003" target="#Material.003-material"/>
-              <instance_material symbol="Material.002" target="#Material.002-material">
+              <instance_material symbol="Material.001" target="#Material.001-material">
                 <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
               </instance_material>
             </technique_common>
