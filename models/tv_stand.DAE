@@ -5,12 +5,78 @@
       <author>Liam</author>
       <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.6;  Revision: 62</authoring_tool>
     </contributor>
-    <created>2018-03-04T16:37:38</created>
-    <modified>2018-03-04T16:37:38</modified>
+    <created>2018-03-04T16:33:32</created>
+    <modified>2018-03-04T16:33:32</modified>
     <unit name="inch" meter="0.0254"/>
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_effects>
+    <effect id="Material.004">
+      <profile_COMMON>
+        <newparam sid="_024px-Balsa_Wood_Texture_jpg-surface">
+          <surface type="2D">
+            <init_from>_024px-Balsa_Wood_Texture_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="_024px-Balsa_Wood_Texture_jpg-sampler">
+          <sampler2D>
+            <source>_024px-Balsa_Wood_Texture_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="_024px-Balsa_Wood_Texture_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float>32.64213</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <opacity_type sid="opacity_type" type="int">0</opacity_type>
+            <falloff_type sid="falloff_type" type="int">0</falloff_type>
+            <falloff sid="falloff" type="float">0</falloff>
+            <index_of_refraction sid="index_of_refraction" type="float">1.5</index_of_refraction>
+            <wire_size sid="wire_size" type="float">1</wire_size>
+            <wire_units sid="wire_units" type="int">0</wire_units>
+            <apply_reflection_dimming sid="apply_reflection_dimming" type="bool">0</apply_reflection_dimming>
+            <dim_level sid="dim_level" type="float">0</dim_level>
+            <reflection_level sid="reflection_level" type="float">3</reflection_level>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_texture_lock sid="ambient_diffuse_texture_lock" type="bool">1</ambient_diffuse_texture_lock>
+            <ambient_diffuse_lock sid="ambient_diffuse_lock" type="bool">0</ambient_diffuse_lock>
+            <diffuse_specular_lock sid="diffuse_specular_lock" type="bool">0</diffuse_specular_lock>
+            <use_self_illum_color sid="use_self_illum_color" type="bool">1</use_self_illum_color>
+            <self_illumination sid="self_illumination" type="float">0</self_illumination>
+            <specular_level sid="specular_level" type="float">0</specular_level>
+            <soften sid="soften" type="float">0.1</soften>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
     <effect id="Material.001">
       <profile_COMMON>
         <technique sid="common">
@@ -181,6 +247,9 @@
     </effect>
   </library_effects>
   <library_materials>
+    <material id="Material.004-material" name="Material.004">
+      <instance_effect url="#Material.004"/>
+    </material>
     <material id="Material.001-material" name="Material.001">
       <instance_effect url="#Material.001"/>
     </material>
@@ -192,6 +261,49 @@
     </material>
   </library_materials>
   <library_geometries>
+    <geometry id="geom-Cube.001" name="Cube.001">
+      <mesh>
+        <source id="geom-Cube.001-positions">
+          <float_array id="geom-Cube.001-positions-array" count="168">-0.3974352 -0.1072043 -0.06299478 -0.3974352 -0.1072043 0.1072043 -0.3855886 0.1072043 -0.05114828 -0.3855886 0.1072043 0.09535776 0.3974352 -0.1072043 -0.06299478 0.3974352 -0.1072043 0.1072043 0.3855886 0.1072043 -0.05114828 0.3855886 0.1072043 0.09535776 -0.3974352 0.1072043 0.1072043 -0.3974352 0.1072043 -0.06299478 0.3974352 0.1072043 0.1072043 0.3974352 0.1072043 -0.06299478 -0.3855886 -0.09701613 0.09535776 -0.3855886 -0.09701613 -0.05114828 0.3855886 -0.09701613 0.09535776 0.3855886 -0.09701613 -0.05114828 -0.130504 0.1072043 0.1072043 0.130504 0.1072043 0.1072043 0.130504 0.1072043 -0.06299478 -0.130504 0.1072043 -0.06299478 0.130504 -0.1072043 0.1072043 -0.130504 -0.1072043 0.1072043 -0.130504 -0.1072043 -0.06299478 0.130504 -0.1072043 -0.06299478 -0.130504 0.1072043 0.09535776 0.130504 0.1072043 0.09535776 0.130504 0.1072043 -0.05114828 -0.130504 0.1072043 -0.05114828 -0.130504 -0.09701613 0.09535776 0.130504 -0.09701613 0.09535776 0.130504 -0.09701613 -0.05114828 -0.130504 -0.09701613 -0.05114828 -0.1191486 0.1072043 0.1072043 0.1191486 0.1072043 0.1072043 0.1191486 0.1072043 -0.06299478 -0.1191486 0.1072043 -0.06299478 0.1191486 -0.1072043 0.1072043 -0.1191486 -0.1072043 0.1072043 -0.1191486 -0.1072043 -0.06299478 0.1191486 -0.1072043 -0.06299478 -0.1191486 0.1072043 0.09535776 0.1191486 0.1072043 0.09535776 0.1191486 0.1072043 -0.05114828 -0.1191486 0.1072043 -0.05114828 -0.1191486 -0.09701613 0.09535776 0.1191486 -0.09701613 0.09535776 0.1191486 -0.09701613 -0.05114828 -0.1191486 -0.09701613 -0.05114828 -0.130504 -0.09701613 -0.05114828 -0.130504 -0.09701613 0.09535776 -0.1191486 -0.09701613 0.09535776 -0.1191486 -0.09701613 -0.05114828 0.1191486 -0.09701613 -0.05114828 0.1191486 -0.09701613 0.09535776 0.130504 -0.09701613 0.09535776 0.130504 -0.09701613 -0.05114828</float_array>
+          <technique_common>
+            <accessor source="#geom-Cube.001-positions-array" count="56" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Cube.001-normals">
+          <float_array id="geom-Cube.001-normals-array" count="576">-1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -1 0 0 -0.9999999 0 0 -0.9999999 0 0 -1 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 1 6.02402e-7 0 1 -6.02402e-7 0 1 -6.02402e-7 0 1 6.02402e-7 0 1 3.9188e-7 0 1 6.02402e-7 0 1 6.02402e-7 0 1 6.02402e-7 0 1 -6.02402e-7 0 1 6.02402e-7 0 1 6.02402e-7 0 1 -6.02402e-7 0 1 -3.9188e-7 0 1 -6.02402e-7 0 1 -6.02402e-7 0 1 -6.02402e-7 0 1 0 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -6.02402e-7 0 1 -4.11323e-7 0 1 -6.02402e-7 0 1 -6.02402e-7 0 1 9.72169e-9 0 1 -3.9188e-7 0 1 -6.02402e-7 0 1 0 0 1 6.02402e-7 0 1 4.11323e-7 0 1 6.02402e-7 0 1 6.02402e-7 0 1 -9.72169e-9 0 1 3.9188e-7 0 1 6.02402e-7 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -0.9999999 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 1 4.11323e-7 0 1 9.72169e-9 0 1 0 0 1 6.02402e-7 0 1 9.72169e-9 0 1 -9.72169e-9 0 1 0 0 1 0 0 1 -4.11323e-7 0 1 -9.72169e-9 0 1 0 0 1 -6.02402e-7 0 1 -9.72169e-9 0 1 9.72169e-9 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 1 0 -1.52565e-7 1 0 -1.52565e-7 1 0 -1.52565e-7 1 0 -1.52565e-7 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -1 0 1.52565e-7 -1 0 1.52565e-7 -1 0 1.52565e-7 -1 0 1.52565e-7 1 0 0 1 0 0 1 0 0 1 0 0 0 1 4.11323e-7 0 1 -3.9188e-7 0 1 9.72169e-9 0 1 9.72169e-9 0 1 -4.11323e-7 0 1 3.9188e-7 0 1 -9.72169e-9 0 1 -9.72169e-9</float_array>
+          <technique_common>
+            <accessor source="#geom-Cube.001-normals-array" count="192" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Cube.001-map1">
+          <float_array id="geom-Cube.001-map1-array" count="306">1.607302 -0.8252265 0 1.607302 -0.4194875 0 1.557478 0.1477534 0 1.557477 -0.4178215 0 1.963216 0.1477534 0 1.963216 -0.4178215 0 1.545569 1.269941 0 -1.249562 -1.404423 0 0.08347693 1.269941 0 -0.1373827 1.271607 0 -1.249562 2.404423 0 0.2683563 1.271607 0 0.2683564 1.837182 0 -0.1373823 1.837182 0 -0.8438227 1.271608 0 -0.8438222 1.837183 0 -0.6557708 -0.6651738 0 -0.622963 0.02622181 0 -0.6557711 0.02622181 0 0.4093735 0.7969186 0 0.1149249 1.269941 0 0.7748735 1.269941 0 0.8063213 1.269941 0 -0.5431214 1.838849 0 0.9747965 1.271607 0 0.9747965 1.837182 0 -0.1373824 1.838849 0 -0.6557714 1.269941 0 0.5690576 1.838849 0 0.974796 1.838849 0 -1.249561 1.837183 0 -1.249562 1.271608 0 1.384019 -1.404423 0 -1.249562 1.838849 0 -1.249562 1.269941 0 2.13936 1.269941 0 1.009728 0.3727021 0 1.042843 0.7784399 0 1.011395 0.7784399 0 1.545569 0.798586 0 1.68472 -0.6963171 0 1.68472 -0.2905784 0 1.384019 -0.6979833 0 1.009728 0.7784401 0 1.011394 0.3727021 0 1.042843 0.3727021 0 -0.6557714 0.7969189 0 -0.6229633 0.7641108 0 -0.217225 0.7641113 0 -0.1844171 0.7969196 0 -0.6229631 0.0576697 0 0.4093727 0.05767003 0 -0.1844172 0.0576697 0 -0.217225 -0.6337258 0 -0.1844171 -0.6337259 0 -0.622963 -0.6651738 0 0.5690576 2.404423 0 -0.5431213 2.404423 0 -0.1373824 2.404423 0 0.9747965 2.404423 0 -1.249561 -0.6651742 0 -1.249561 0.05766982 0 -1.249562 0.7969183 0 -1.249562 0.7985858 0 -0.2172253 0.02622181 0 0.1149251 0.798586 0 -0.1844172 0.02622196 0 -0.6557714 0.798586 0 0.08347708 0.798586 0 0.4093728 -0.6651738 0 -0.1844171 -0.6651738 0 -0.655771 0.0576697 0 -1.249561 0.02622181 0 -0.1844167 -1.404423 0 0.4093735 -1.404422 0 -0.2172248 -1.371615 0 -0.622963 -1.371615 0 -0.6557708 -1.404423 0 0.9782803 -1.404423 0 -1.249561 -0.6337261 0 -0.6229628 -0.6337261 0 0.8063211 0.798586 0 -0.217225 -0.6651737 0 0.9782803 -0.6963169 0 0.9782803 -0.2905784 0 0.9782805 -0.6979831 0 0.9782807 0.7784401 0 0.9782803 0.3727021 0 -0.2172253 0.05766982 0 -0.6557708 -0.6337261 0 0.7748733 0.798586 0 0.4093727 0.02622196 0 0.4093728 -0.6337259 0 0.9473532 -0.8252261 0 0.9473532 -0.4194875 0 0.8975292 0.1477534 0 0.4917904 0.1477534 0 0.4917904 -0.4178212 0 0.8975292 -0.4178212 0 -0.168158 0.1477534 0 2.139359 0.7985858 0 -0.168158 -0.4178215 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Cube.001-map1-array" count="102" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Cube.001-vertices">
+          <input semantic="POSITION" source="#geom-Cube.001-positions"/>
+        </vertices>
+        <triangles material="Material.004" count="96">
+          <input semantic="VERTEX" source="#geom-Cube.001-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Cube.001-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Cube.001-map1" offset="2" set="0"/>
+          <p>1 0 27 8 1 34 9 2 63 9 2 63 0 3 67 1 0 27 7 4 59 6 5 56 15 6 28 15 6 28 14 7 29 7 4 59 10 8 35 5 9 6 4 10 39 4 10 39 11 11 100 10 8 35 21 12 8 1 13 27 0 14 67 0 14 67 22 15 68 21 12 8 23 16 69 18 17 70 11 18 73 11 18 73 4 19 74 23 16 69 21 20 61 16 21 71 8 22 46 8 22 46 1 23 62 21 20 61 3 24 47 2 25 48 9 26 49 9 26 49 8 27 46 3 24 47 24 28 50 3 29 47 8 30 46 8 30 46 16 31 71 24 28 50 6 32 75 7 33 76 10 34 77 10 34 77 11 35 73 6 32 75 26 36 82 6 37 75 11 38 73 11 38 73 18 39 70 26 36 82 29 40 83 14 41 40 15 42 41 15 42 41 30 43 84 29 40 83 2 44 9 3 45 11 12 46 12 12 46 12 13 47 13 2 44 9 27 48 14 2 49 9 13 50 13 13 50 13 31 51 15 27 48 14 25 52 57 7 53 10 14 54 33 14 54 33 29 55 23 25 52 57 3 56 11 24 57 24 28 58 25 28 58 25 12 59 12 3 56 11 31 60 15 28 61 30 24 62 31 24 62 31 27 63 14 31 60 15 6 64 56 26 65 58 30 66 26 30 66 26 15 67 28 6 64 56 12 68 85 28 69 78 31 70 32 31 70 32 13 71 42 12 68 85 45 72 43 29 73 86 30 74 87 30 74 87 46 75 36 45 72 43 2 76 48 27 77 88 19 78 52 19 78 52 9 79 49 2 76 48 42 80 53 26 81 82 18 82 70 18 82 70 34 83 54 42 80 53 7 84 76 25 85 55 17 86 16 17 86 16 10 87 77 7 84 76 40 88 17 24 89 50 16 90 71 16 90 71 32 91 18 40 88 17 5 92 7 10 93 77 17 94 16 17 94 16 20 95 60 5 92 7 37 96 72 32 97 18 16 98 71 16 98 71 21 99 61 37 96 72 0 100 19 9 101 49 19 102 52 19 102 52 22 103 51 0 100 19 39 104 92 34 105 54 18 106 70 18 106 70 23 107 69 39 104 92 5 108 6 20 109 22 23 110 81 23 110 81 4 111 39 5 108 6 37 112 20 21 113 8 22 114 68 22 114 68 38 115 65 37 112 20 20 116 22 36 117 21 39 118 90 39 118 90 23 119 81 20 116 22 36 120 21 37 121 20 38 122 65 38 122 65 39 123 90 36 120 21 22 124 51 19 125 52 35 126 66 35 126 66 38 127 91 22 124 51 38 128 91 35 129 66 34 130 54 34 130 54 39 131 92 38 128 91 20 132 60 17 133 16 33 134 89 33 134 89 36 135 79 20 132 60 36 136 79 33 137 89 32 138 18 32 138 18 37 139 72 36 136 79 25 140 55 41 141 80 33 142 89 33 142 89 17 143 16 25 140 55 41 144 80 40 145 17 32 146 18 32 146 18 33 147 89 41 144 80 27 148 88 43 149 64 35 150 66 35 150 66 19 151 52 27 148 88 43 152 64 42 153 53 34 154 54 34 154 54 35 155 66 43 152 64 49 156 37 44 157 38 47 158 44 47 158 44 48 159 45 49 156 37 44 160 93 45 161 0 46 162 1 46 162 1 47 163 94 44 160 93 43 164 95 40 165 96 50 166 97 50 166 97 51 167 98 43 164 95 42 168 2 43 169 95 47 170 98 47 170 98 46 171 3 42 168 2 40 172 96 41 173 99 45 174 101 45 174 101 44 175 97 40 172 96 41 176 4 42 177 2 52 178 3 52 178 3 53 179 5 41 176 4 54 180 23 55 181 26 26 182 58 26 182 58 25 183 57 54 180 23 25 184 55 26 185 82 42 186 53 42 186 53 41 187 80 25 184 55 27 188 88 24 189 50 40 190 17 40 190 17 43 191 64 27 188 88</p>
+        </triangles>
+      </mesh>
+    </geometry>
     <geometry id="geom-Cube" name="Cube">
       <mesh>
         <source id="geom-Cube-positions">
@@ -257,19 +369,44 @@
       </technique_common>
     </light>
   </library_lights>
+  <library_images>
+    <image id="_024px-Balsa_Wood_Texture_jpg">
+      <init_from>./images/0_1024px-Balsa_Wood_Texture.jpg</init_from>
+    </image>
+  </library_images>
   <library_visual_scenes>
     <visual_scene id="MaxScene">
       <node name="EnvironmentAmbientLight">
         <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Cube.001" name="Cube.001">
+        <matrix>39.37008 0 0 0 0 39.37008 6.4142e-6 0 0 -6.4142e-6 39.37008 -9.238202 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Cube.001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material.004" target="#Material.004-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
       </node>
       <node id="node-Cube" name="Cube">
         <matrix>39.37008 0 0 0 0 39.37008 6.4142e-6 0 0 -6.4142e-6 39.37008 0 0 0 0 1</matrix>
         <instance_geometry url="#geom-Cube">
           <bind_material>
             <technique_common>
-              <instance_material symbol="Material.001" target="#Material.001-material"/>
-              <instance_material symbol="Material.002" target="#Material.002-material"/>
               <instance_material symbol="Material.003" target="#Material.003-material"/>
+              <instance_material symbol="Material.002" target="#Material.002-material"/>
+              <instance_material symbol="Material.001" target="#Material.001-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
