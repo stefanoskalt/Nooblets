@@ -6,116 +6,98 @@
       <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.6;  Revision: 62</authoring_tool>
       <source_data>file:///C:/Users/User/Documents/3dsMax/scenes/Door.max</source_data>
     </contributor>
-    <created>2018-02-01T16:25:02</created>
-    <modified>2018-02-01T16:25:02</modified>
+    <created>2018-03-03T21:34:47</created>
+    <modified>2018-03-03T21:34:47</modified>
     <unit name="inch" meter="0.0254"/>
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_effects>
-    <effect id="ColorEffectR135G59B8">
+    <effect id="doorLight">
       <profile_COMMON>
         <technique sid="common">
           <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
             <ambient>
-              <color>0.5294118 0.2313726 0.03137255 1</color>
+              <color>0.5 0.5 0.5 1</color>
             </ambient>
             <diffuse>
-              <color>0.5294118 0.2313726 0.03137255 1</color>
+              <color>0.5 0.5 0.5 1</color>
             </diffuse>
             <specular>
-              <color>1 1 1 1</color>
+              <color>0.4 0.4 0.4 1</color>
             </specular>
             <shininess>
-              <float>10</float>
+              <float>100</float>
             </shininess>
-            <reflective>
-              <color>0 0 0 1</color>
-            </reflective>
-            <transparent>
-              <color>1 1 1 1</color>
-            </transparent>
-            <transparency>
-              <float>1</float>
-            </transparency>
           </phong>
         </technique>
       </profile_COMMON>
     </effect>
-    <effect id="ColorEffectR12G12B12">
+    <effect id="metalPallet">
       <profile_COMMON>
         <technique sid="common">
           <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
             <ambient>
-              <color>0.04705882 0.04705882 0.04705882 1</color>
+              <color>0.914 0.914 0.92 1</color>
             </ambient>
             <diffuse>
-              <color>0.04705882 0.04705882 0.04705882 1</color>
+              <color>0.914 0.914 0.92 1</color>
             </diffuse>
             <specular>
-              <color>1 1 1 1</color>
+              <color>0.3656 0.3656 0.368 1</color>
             </specular>
             <shininess>
-              <float>10</float>
+              <float>49</float>
             </shininess>
-            <reflective>
-              <color>0 0 0 1</color>
-            </reflective>
-            <transparent>
-              <color>1 1 1 1</color>
-            </transparent>
-            <transparency>
-              <float>1</float>
-            </transparency>
           </phong>
         </technique>
       </profile_COMMON>
     </effect>
-    <effect id="ColorEffectR21G13B6">
+    <effect id="metalDoorHandle">
       <profile_COMMON>
         <technique sid="common">
           <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
             <ambient>
-              <color>0.08235294 0.05098039 0.02352941 1</color>
+              <color>0.02352941 0.02352941 0.02352941 1</color>
             </ambient>
             <diffuse>
-              <color>0.08235294 0.05098039 0.02352941 1</color>
+              <color>0.02352941 0.02352941 0.02352941 1</color>
             </diffuse>
             <specular>
-              <color>1 1 1 1</color>
+              <color>0.009411766 0.009411766 0.009411766 1</color>
             </specular>
             <shininess>
-              <float>10</float>
+              <float>71</float>
             </shininess>
-            <reflective>
-              <color>0 0 0 1</color>
-            </reflective>
-            <transparent>
-              <color>1 1 1 1</color>
-            </transparent>
-            <transparency>
-              <float>1</float>
-            </transparency>
           </phong>
         </technique>
       </profile_COMMON>
     </effect>
   </library_effects>
   <library_materials>
-    <material id="ColorEffectR135G59B8-material" name="ColorEffectR135G59B8-material">
-      <instance_effect url="#ColorEffectR135G59B8"/>
+    <material id="doorLight-material" name="doorLight">
+      <instance_effect url="#doorLight"/>
     </material>
-    <material id="ColorEffectR12G12B12-material" name="ColorEffectR12G12B12-material">
-      <instance_effect url="#ColorEffectR12G12B12"/>
+    <material id="metalPallet-material" name="metalPallet">
+      <instance_effect url="#metalPallet"/>
     </material>
-    <material id="ColorEffectR21G13B6-material" name="ColorEffectR21G13B6-material">
-      <instance_effect url="#ColorEffectR21G13B6"/>
+    <material id="metalDoorHandle-material" name="metalDoorHandle">
+      <instance_effect url="#metalDoorHandle"/>
     </material>
   </library_materials>
   <library_geometries>
     <geometry id="geom-Door" name="Door">
       <mesh>
         <source id="geom-Door-positions">
-          <float_array id="geom-Door-positions-array" count="24">-3.937008 -19.68504 0 3.937008 -19.68504 0 -3.937008 19.68504 0 3.937008 19.68504 0 -3.937008 -19.68504 78.74016 3.937008 -19.68504 78.74016 -3.937008 19.68504 78.74016 3.937008 19.68504 78.74016</float_array>
+          <float_array id="geom-Door-positions-array" count="24">-3.937008 -23.62205 0 3.937008 -23.62205 0 -3.937008 23.62205 0 3.937008 23.62205 0 -3.937008 -23.62205 80.70866 3.937008 -23.62205 80.70866 -3.937008 23.62205 80.70866 3.937008 23.62205 80.70866</float_array>
           <technique_common>
             <accessor source="#geom-Door-positions-array" count="8" stride="3">
               <param name="X" type="float"/>
@@ -125,7 +107,7 @@
           </technique_common>
         </source>
         <source id="geom-Door-normals">
-          <float_array id="geom-Door-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <float_array id="geom-Door-normals-array" count="72">0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 0.9999999 0 0 1 0 0 0.9999999 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
           <technique_common>
             <accessor source="#geom-Door-normals-array" count="24" stride="3">
               <param name="X" type="float"/>
@@ -135,9 +117,9 @@
           </technique_common>
         </source>
         <source id="geom-Door-map1">
-          <float_array id="geom-Door-map1-array" count="36">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <float_array id="geom-Door-map1-array" count="108">0.9999999 -0.01306617 0.4166665 8.9407e-8 -0.01306617 0.5833332 8.9407e-8 -0.01306617 0.4166668 0.4166665 -0.01306617 0.9999999 0.9999999 0.9957186 0.4166665 8.9407e-8 0.9957186 0.5833332 8.9407e-8 0.9957186 0.4166668 0.4166665 0.9957186 0.9999999 0.5833334 1.49012e-7 -0.01306617 0.5833332 0.9999999 -0.01306617 0.4166665 0.9999999 -0.01306617 0.4166665 0.9999999 -0.01306617 0.4166668 8.9407e-8 -0.01306617 0.5833334 1.49012e-7 -0.01306617 0.4166665 1.49012e-7 0.9957186 0.5833332 8.9407e-8 0.9957186 0.5833334 0.9999999 0.9957186 0.5833334 0.9999999 0.9957186 0.4166668 0.9999999 0.9957186 0.4166665 1.49012e-7 0.9957186 0.4166665 -0.01306617 1.49012e-7 0.5833332 -0.01306617 8.9407e-8 0.5833332 0.9957186 8.9407e-8 0.5833332 0.9957186 8.9407e-8 0.4166665 0.9957186 1.49012e-7 0.4166665 -0.01306617 1.49012e-7 8.9407e-8 -0.01306617 0.5833332 0.9999999 -0.01306617 0.5833334 0.9999999 0.9957186 0.5833334 0.9999999 0.9957186 0.5833334 0.4166665 -0.01306617 0.9999999 0.5833332 -0.01306617 0.9999999 0.5833332 0.9957186 0.9999999 0.5833332 0.9957186 0.9999999 8.9407e-8 -0.01306617 0.4166668 0.9999999 0.9957186 0.4166665</float_array>
           <technique_common>
-            <accessor source="#geom-Door-map1-array" count="12" stride="3">
+            <accessor source="#geom-Door-map1-array" count="36" stride="3">
               <param name="S" type="float"/>
               <param name="T" type="float"/>
               <param name="P" type="float"/>
@@ -147,23 +129,13 @@
         <vertices id="geom-Door-vertices">
           <input semantic="POSITION" source="#geom-Door-positions"/>
         </vertices>
-        <triangles material="ColorMaterial" count="12">
+        <triangles material="doorLight" count="12">
           <input semantic="VERTEX" source="#geom-Door-vertices" offset="0"/>
           <input semantic="NORMAL" source="#geom-Door-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#geom-Door-map1" offset="2" set="0"/>
-          <p>0 0 9 2 1 11 3 2 10 3 2 10 1 3 8 0 0 9 4 4 8 5 5 9 7 6 11 7 6 11 6 7 10 4 4 8 0 8 4 1 9 5 5 10 7 5 10 7 4 11 6 0 8 4 1 12 0 3 13 1 7 14 3 7 14 3 5 15 2 1 12 0 3 16 4 2 17 5 6 18 7 6 18 7 7 19 6 3 16 4 2 20 0 0 21 1 4 22 3 4 22 3 6 23 2 2 20 0</p>
+          <p>0 0 8 2 1 9 3 2 10 3 2 11 1 3 12 0 0 13 4 4 14 5 5 15 7 6 16 7 6 17 6 7 18 4 4 19 0 8 20 1 9 21 5 10 22 5 10 23 4 11 24 0 8 25 1 12 26 3 13 27 7 14 28 7 14 29 5 15 5 1 12 1 3 16 30 2 17 31 6 18 32 6 18 33 7 19 7 3 16 3 2 20 34 0 21 0 4 22 35 4 22 4 6 23 6 2 20 2</p>
         </triangles>
       </mesh>
-      <extra>
-        <technique profile="OpenCOLLADA3dsMax">
-          <max_box>
-            <widthsegments sid="widthsegments" type="int">1</widthsegments>
-            <lengthsegments sid="lengthsegments" type="int">1</lengthsegments>
-            <heightsegments sid="heightsegments" type="int">1</heightsegments>
-            <generateuvs sid="generateuvs" type="bool">1</generateuvs>
-          </max_box>
-        </technique>
-      </extra>
     </geometry>
     <geometry id="geom-PalletFront" name="PalletFront">
       <mesh>
@@ -188,9 +160,9 @@
           </technique_common>
         </source>
         <source id="geom-PalletFront-map1">
-          <float_array id="geom-PalletFront-map1-array" count="36">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <float_array id="geom-PalletFront-map1-array" count="108">0.824296 0.008565605 0.2159476 0.1757038 0.008565605 0.7840523 0.1757038 0.008565605 0.2159477 0.2159476 0.008565605 0.824296 0.824296 0.9914344 0.2159476 0.1757038 0.9914344 0.7840523 0.1757038 0.9914344 0.2159477 0.2159476 0.9914344 0.824296 0.7840524 0.175704 0.008565605 0.7840523 0.8242962 0.008565605 0.2159476 0.824296 0.008565605 0.2159476 0.824296 0.008565605 0.2159477 0.1757038 0.008565605 0.7840524 0.175704 0.008565605 0.2159476 0.175704 0.9914344 0.7840523 0.1757038 0.9914344 0.7840524 0.824296 0.9914344 0.7840524 0.824296 0.9914344 0.2159477 0.8242962 0.9914344 0.2159476 0.175704 0.9914344 0.2159476 0.008565605 0.175704 0.7840523 0.008565605 0.1757038 0.7840523 0.9914344 0.1757038 0.7840523 0.9914344 0.1757038 0.2159476 0.9914344 0.175704 0.2159476 0.008565605 0.175704 0.1757038 0.008565605 0.7840523 0.824296 0.008565605 0.7840524 0.824296 0.9914344 0.7840524 0.824296 0.9914344 0.7840524 0.2159476 0.008565605 0.824296 0.7840523 0.008565605 0.8242962 0.7840523 0.9914344 0.8242962 0.7840523 0.9914344 0.8242962 0.1757038 0.008565605 0.2159477 0.824296 0.9914344 0.2159476</float_array>
           <technique_common>
-            <accessor source="#geom-PalletFront-map1-array" count="12" stride="3">
+            <accessor source="#geom-PalletFront-map1-array" count="36" stride="3">
               <param name="S" type="float"/>
               <param name="T" type="float"/>
               <param name="P" type="float"/>
@@ -200,23 +172,13 @@
         <vertices id="geom-PalletFront-vertices">
           <input semantic="POSITION" source="#geom-PalletFront-positions"/>
         </vertices>
-        <triangles material="ColorMaterial" count="12">
+        <triangles material="metalPallet" count="12">
           <input semantic="VERTEX" source="#geom-PalletFront-vertices" offset="0"/>
           <input semantic="NORMAL" source="#geom-PalletFront-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#geom-PalletFront-map1" offset="2" set="0"/>
-          <p>0 0 9 2 1 11 3 2 10 3 2 10 1 3 8 0 0 9 4 4 8 5 5 9 7 6 11 7 6 11 6 7 10 4 4 8 0 8 4 1 9 5 5 10 7 5 10 7 4 11 6 0 8 4 1 12 0 3 13 1 7 14 3 7 14 3 5 15 2 1 12 0 3 16 4 2 17 5 6 18 7 6 18 7 7 19 6 3 16 4 2 20 0 0 21 1 4 22 3 4 22 3 6 23 2 2 20 0</p>
+          <p>0 0 8 2 1 9 3 2 10 3 2 11 1 3 12 0 0 13 4 4 14 5 5 15 7 6 16 7 6 17 6 7 18 4 4 19 0 8 20 1 9 21 5 10 22 5 10 23 4 11 24 0 8 25 1 12 26 3 13 27 7 14 28 7 14 29 5 15 5 1 12 1 3 16 30 2 17 31 6 18 32 6 18 33 7 19 7 3 16 3 2 20 34 0 21 0 4 22 35 4 22 4 6 23 6 2 20 2</p>
         </triangles>
       </mesh>
-      <extra>
-        <technique profile="OpenCOLLADA3dsMax">
-          <max_box>
-            <widthsegments sid="widthsegments" type="int">1</widthsegments>
-            <lengthsegments sid="lengthsegments" type="int">1</lengthsegments>
-            <heightsegments sid="heightsegments" type="int">1</heightsegments>
-            <generateuvs sid="generateuvs" type="bool">1</generateuvs>
-          </max_box>
-        </technique>
-      </extra>
     </geometry>
     <geometry id="geom-FrontHandle1" name="FrontHandle1">
       <mesh>
@@ -253,7 +215,7 @@
         <vertices id="geom-FrontHandle1-vertices">
           <input semantic="POSITION" source="#geom-FrontHandle1-positions"/>
         </vertices>
-        <triangles material="ColorMaterial" count="216">
+        <triangles material="metalDoorHandle" count="216">
           <input semantic="VERTEX" source="#geom-FrontHandle1-vertices" offset="0"/>
           <input semantic="NORMAL" source="#geom-FrontHandle1-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#geom-FrontHandle1-map1" offset="2" set="0"/>
@@ -308,7 +270,7 @@
         <vertices id="geom-FrontHandle2-vertices">
           <input semantic="POSITION" source="#geom-FrontHandle2-positions"/>
         </vertices>
-        <triangles material="ColorMaterial" count="216">
+        <triangles material="metalDoorHandle" count="216">
           <input semantic="VERTEX" source="#geom-FrontHandle2-vertices" offset="0"/>
           <input semantic="NORMAL" source="#geom-FrontHandle2-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#geom-FrontHandle2-map1" offset="2" set="0"/>
@@ -348,7 +310,7 @@
         <instance_geometry url="#geom-Door">
           <bind_material>
             <technique_common>
-              <instance_material symbol="ColorMaterial" target="#ColorEffectR135G59B8-material"/>
+              <instance_material symbol="doorLight" target="#doorLight-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
@@ -362,11 +324,11 @@
         </extra>
       </node>
       <node id="node-PalletFront" name="PalletFront">
-        <matrix>0.01374877 0 0 -0.597386 0 0.2103999 0 -11.88353 0 0 0.5089461 28.08936 0 0 0 1</matrix>
+        <matrix>0.01374877 0 0 -0.597386 0 0.2103999 0 -13.70657 0 0 0.5089461 27.63474 0 0 0 1</matrix>
         <instance_geometry url="#geom-PalletFront">
           <bind_material>
             <technique_common>
-              <instance_material symbol="ColorMaterial" target="#ColorEffectR12G12B12-material"/>
+              <instance_material symbol="metalPallet" target="#metalPallet-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
@@ -380,11 +342,11 @@
         </extra>
       </node>
       <node id="node-PalletBack" name="PalletBack">
-        <matrix>0.01374877 0 0 0.6865021 0 0.2103999 0 -11.88353 0 0 0.5089461 28.08936 0 0 0 1</matrix>
+        <matrix>0.01374877 0 0 0.6865021 0 0.2103999 0 -13.70657 0 0 0.5089461 27.63474 0 0 0 1</matrix>
         <instance_geometry url="#geom-PalletFront">
           <bind_material>
             <technique_common>
-              <instance_material symbol="ColorMaterial" target="#ColorEffectR12G12B12-material"/>
+              <instance_material symbol="metalPallet" target="#metalPallet-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
@@ -398,11 +360,11 @@
         </extra>
       </node>
       <node id="node-FrontHandle1" name="FrontHandle1">
-        <matrix>-8.84798e-9 0 0.3632477 -3.868765 0 0.2024183 0 -11.80877 -0.2024183 0 -1.58781e-8 32.54808 0 0 0 1</matrix>
+        <matrix>-8.84798e-9 0 0.3632477 -3.868765 0 0.2024183 0 -13.63181 -0.2024183 0 -1.58781e-8 32.09346 0 0 0 1</matrix>
         <instance_geometry url="#geom-FrontHandle1">
           <bind_material>
             <technique_common>
-              <instance_material symbol="ColorMaterial" target="#ColorEffectR21G13B6-material"/>
+              <instance_material symbol="metalDoorHandle" target="#metalDoorHandle-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
@@ -416,11 +378,11 @@
         </extra>
       </node>
       <node id="node-FrontHandle2" name="FrontHandle2">
-        <matrix>0.3351908 0 0 -3.240252 0 -1.46517e-8 0.5175219 -11.57925 0 -0.3351908 -2.26216e-8 32.54465 0 0 0 1</matrix>
+        <matrix>0.3351908 0 0 -3.240252 0 -1.46517e-8 0.5175219 -13.40229 0 -0.3351908 -2.26216e-8 32.09003 0 0 0 1</matrix>
         <instance_geometry url="#geom-FrontHandle2">
           <bind_material>
             <technique_common>
-              <instance_material symbol="ColorMaterial" target="#ColorEffectR21G13B6-material"/>
+              <instance_material symbol="metalDoorHandle" target="#metalDoorHandle-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
@@ -434,11 +396,11 @@
         </extra>
       </node>
       <node id="node-BackHandle1" name="BackHandle1">
-        <matrix>-8.84798e-9 0 0.3632477 0.7158661 0 0.2024183 0 -11.80877 -0.2024183 0 -1.58781e-8 32.54808 0 0 0 1</matrix>
+        <matrix>-8.84798e-9 0 0.3632477 0.7158661 0 0.2024183 0 -13.63181 -0.2024183 0 -1.58781e-8 32.09346 0 0 0 1</matrix>
         <instance_geometry url="#geom-FrontHandle1">
           <bind_material>
             <technique_common>
-              <instance_material symbol="ColorMaterial" target="#ColorEffectR21G13B6-material"/>
+              <instance_material symbol="metalDoorHandle" target="#metalDoorHandle-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
@@ -452,11 +414,11 @@
         </extra>
       </node>
       <node id="node-BackHandle2" name="BackHandle2">
-        <matrix>0.3351908 0 0 3.299685 0 -1.46517e-8 0.5175219 -11.57925 0 -0.3351908 -2.26216e-8 32.54465 0 0 0 1</matrix>
+        <matrix>0.3351908 0 0 3.299685 0 -1.46517e-8 0.5175219 -13.40229 0 -0.3351908 -2.26216e-8 32.09003 0 0 0 1</matrix>
         <instance_geometry url="#geom-FrontHandle2">
           <bind_material>
             <technique_common>
-              <instance_material symbol="ColorMaterial" target="#ColorEffectR21G13B6-material"/>
+              <instance_material symbol="metalDoorHandle" target="#metalDoorHandle-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
