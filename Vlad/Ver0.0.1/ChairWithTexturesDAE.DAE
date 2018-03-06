@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>1522106</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.6;  Revision: 59</authoring_tool>
+    </contributor>
+    <created>2018-03-06T14:12:31</created>
+    <modified>2018-03-06T14:12:31</modified>
+    <unit name="inch" meter="0.0254"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material">
+      <profile_COMMON>
+        <newparam sid="Brown-Oak-Wood-Texture-Background-480x345_jpg-surface">
+          <surface type="2D">
+            <init_from>Brown-Oak-Wood-Texture-Background-480x345_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Brown-Oak-Wood-Texture-Background-480x345_jpg-sampler">
+          <sampler2D>
+            <source>Brown-Oak-Wood-Texture-Background-480x345_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Brown-Oak-Wood-Texture-Background-480x345_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.25 0.25 0.25 1</color>
+            </specular>
+            <shininess>
+              <float>32.64213</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <opacity_type sid="opacity_type" type="int">0</opacity_type>
+            <falloff_type sid="falloff_type" type="int">0</falloff_type>
+            <falloff sid="falloff" type="float">0</falloff>
+            <index_of_refraction sid="index_of_refraction" type="float">1.5</index_of_refraction>
+            <wire_size sid="wire_size" type="float">1</wire_size>
+            <wire_units sid="wire_units" type="int">0</wire_units>
+            <apply_reflection_dimming sid="apply_reflection_dimming" type="bool">0</apply_reflection_dimming>
+            <dim_level sid="dim_level" type="float">0</dim_level>
+            <reflection_level sid="reflection_level" type="float">3</reflection_level>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_texture_lock sid="ambient_diffuse_texture_lock" type="bool">1</ambient_diffuse_texture_lock>
+            <ambient_diffuse_lock sid="ambient_diffuse_lock" type="bool">0</ambient_diffuse_lock>
+            <diffuse_specular_lock sid="diffuse_specular_lock" type="bool">0</diffuse_specular_lock>
+            <use_self_illum_color sid="use_self_illum_color" type="bool">1</use_self_illum_color>
+            <self_illumination sid="self_illumination" type="float">0</self_illumination>
+            <specular_level sid="specular_level" type="float">0.25</specular_level>
+            <soften sid="soften" type="float">0.1</soften>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material-material" name="Material">
+      <instance_effect url="#Material"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Cube" name="Cube">
+      <mesh>
+        <source id="geom-Cube-positions">
+          <float_array id="geom-Cube-positions-array" count="174">0.4631723 0.4631723 -0.7907455 0.4631723 -0.4631723 -0.7907455 -0.4631724 -0.4631723 -0.7907455 -0.4631722 0.4631724 -0.7907455 0.4631725 0.4631721 -0.4296579 0.463172 -0.4631726 -0.4296579 -0.4631726 -0.4631722 -0.4296579 -0.4631723 0.4631723 -0.4296579 0.4631723 0.3 -0.7907455 0.4631723 -0.3 -0.7907455 -0.4631723 -0.2999999 -0.7907455 -0.4631722 0.3000002 -0.7907455 0.4631723 0.2999998 -0.4296579 0.4631722 -0.3000003 -0.4296579 -0.4631724 -0.2999999 -0.4296579 -0.4631724 0.3000001 -0.4296579 0.3000001 0.4631723 -0.7907455 -0.2999999 0.4631724 -0.7907455 0.3 -0.4631723 -0.7907455 -0.3 -0.4631723 -0.7907455 0.3000002 0.4631721 -0.4296579 -0.2999999 0.4631723 -0.4296579 0.2999997 -0.4631724 -0.4296579 -0.3000002 -0.4631723 -0.4296579 -0.3 0.3 -0.4296579 0.3 0.2999999 -0.4296579 -0.3000001 -0.3 -0.4296579 0.2999999 -0.3000001 -0.4296579 0.3 0.3000001 -0.7907455 -0.3 0.3000001 -0.7907455 0.3 -0.3 -0.7907455 -0.3 -0.3 -0.7907455 0.4631725 0.4631721 -0.3670698 0.463172 -0.4631726 -0.3670698 -0.4631726 -0.4631722 -0.3670698 -0.4631723 0.4631723 -0.3670698 0.3119236 -0.4631726 -0.4296579 0.311924 0.4631721 -0.4296579 0.3119236 -0.4631726 -0.3670698 0.311924 0.4631721 -0.3670698 0.3119236 -0.4631726 -0.4296579 0.311924 0.4631721 -0.4296579 0.3119236 -0.4631726 -0.3670698 0.311924 0.4631721 -0.3670698 0.3119236 -0.4631726 0.07659361 0.463172 -0.4631726 0.07659361 0.4631725 0.4631721 0.07659361 0.311924 0.4631721 0.07659361 -0.12974 0.4012926 -0.8888448 -0.4901982 -0.489213 -0.3942364 0.311924 0.4631721 -0.3670698 0.3119236 -0.4631726 -0.3670698 0.311924 0.4631721 -0.3670698 0.311924 0.4631721 -0.4296579 0.3119236 -0.4631726 -0.4296579 0.311924 0.4631721 -0.4296579 0.3119236 -0.4631726 -0.3670698 0.3119236 -0.4631726 -0.4296579</float_array>
+          <technique_common>
+            <accessor source="#geom-Cube-positions-array" count="58" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Cube-normals">
+          <float_array id="geom-Cube-normals-array" count="504">0 0 -1 0 0 -1 0 0 -1 0 0 -1 1.57472e-7 0 1 1.57472e-7 0 1 1.57472e-7 0 1 1.57472e-7 0 1 1 -7.58721e-7 5.77744e-7 1 -7.58721e-7 5.77744e-7 1 -7.58721e-7 5.77744e-7 1 -7.58721e-7 5.77744e-7 -1.82643e-7 -1 5.19415e-8 -1.82643e-7 -1 5.19415e-8 -1.82643e-7 -1 5.19415e-8 -1.82643e-7 -1 5.19415e-8 -1 5.05814e-7 -4.12674e-7 -1 5.05814e-7 -4.12674e-7 -1 5.05814e-7 -4.12674e-7 -1 5.05814e-7 -4.12674e-7 1.82643e-7 1 4.68558e-7 1.82643e-7 1 4.68558e-7 1.82643e-7 1 4.68558e-7 1.82643e-7 1 4.68558e-7 -1 7.58721e-7 -4.12674e-7 -1 7.58721e-7 -4.12674e-7 -1 7.58721e-7 -4.12674e-7 -1 7.58721e-7 -4.12674e-7 0.9999999 -5.05814e-7 -2.47605e-7 0.9999999 -5.05814e-7 -2.47605e-7 0.9999999 -5.05814e-7 -2.47605e-7 0.9999999 -5.05814e-7 -2.47605e-7 -1.2236e-7 0 1 -1.2236e-7 0 1 -1.2236e-7 0 1 -1.2236e-7 0 1 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 1 -3.79361e-7 3.71407e-7 1 -3.79361e-7 3.71407e-7 1 -3.79361e-7 3.71407e-7 1 -3.79361e-7 3.71407e-7 -3.65286e-7 -1 -3.28779e-7 -3.65286e-7 -1 -3.28779e-7 -3.65286e-7 -1 -3.28779e-7 -3.65286e-7 -1 -3.28779e-7 0.9999999 -6.32268e-7 8.25346e-8 0.9999999 -6.32268e-7 8.25346e-8 0.9999999 -6.32268e-7 8.25346e-8 0.9999999 -6.32268e-7 8.25346e-8 -2.44721e-7 0 0.9999999 -2.44721e-7 0 0.9999999 -2.44721e-7 0 0.9999999 -2.44721e-7 0 0.9999999 5.4793e-7 1 1.26454e-7 5.4793e-7 1 1.26454e-7 5.4793e-7 1 1.26454e-7 5.4793e-7 1 1.26454e-7 3.65287e-7 1 5.61699e-7 3.65287e-7 1 5.61699e-7 3.65287e-7 1 5.61699e-7 3.65287e-7 1 5.61699e-7 -1 3.79361e-7 -5.36476e-7 -1 3.79361e-7 -5.36476e-7 -1 3.79361e-7 -5.36476e-7 -1 3.79361e-7 -5.36476e-7 -7.30573e-7 -1 -7.9992e-7 -7.30573e-7 -1 -7.9992e-7 -7.30573e-7 -1 -7.9992e-7 -7.30573e-7 -1 -7.9992e-7 4.56608e-7 1 5.05814e-7 4.56608e-7 1 5.05814e-7 4.56608e-7 1 5.05814e-7 4.56608e-7 1 5.05814e-7 1.92583e-7 0 1 1.92583e-7 0 1 1.92583e-7 0 1 1.92583e-7 0 1 -5.4793e-7 -1 -5.69041e-7 -5.4793e-7 -1 -5.69041e-7 -5.4793e-7 -1 -5.69041e-7 -5.4793e-7 -1 -5.69041e-7 -5.59664e-7 0 -0.9999999 -5.59664e-7 0 -0.9999999 -5.59664e-7 0 -0.9999999 -5.59664e-7 0 -0.9999999 -1 5.05814e-7 1.23803e-7 -1 5.05814e-7 1.23803e-7 -1 5.05814e-7 1.23803e-7 -1 5.05814e-7 1.23803e-7 0 0 -1 0 0 -1 0 0 -1 0 0 -1 -0.9999999 5.076e-7 0 -0.9999999 5.076e-7 0 -0.9999999 5.076e-7 0 -0.9999999 5.076e-7 0 -3.94084e-7 -1 0 -3.94084e-7 -1 0 -3.94084e-7 -1 0 -3.94084e-7 -1 0 -1 3.21266e-7 0 -1 3.21266e-7 0 -1 3.21266e-7 0 -1 3.21266e-7 0 0.9999999 -5.14026e-7 0 0.9999999 -5.14026e-7 0 0.9999999 -5.14026e-7 0 0.9999999 -5.14026e-7 0 2.69149e-7 1 0 2.69149e-7 1 0 2.69149e-7 1 0 2.69149e-7 1 0 1.97042e-7 1 0 1.97042e-7 1 0 1.97042e-7 1 0 1.97042e-7 1 0 -4.61398e-7 -1 0 -4.61398e-7 -1 0 -4.61398e-7 -1 0 -4.61398e-7 -1 0 -1.78693e-8 0 1 -1.78693e-8 0 1 -1.78693e-8 0 1 -1.78693e-8 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 3.68852e-8 0 1 3.68852e-8 0 1 3.68852e-8 0 1 3.68852e-8 0 1 1 -5.076e-7 0 1 -5.076e-7 0 1 -5.076e-7 0 1 -5.076e-7 0 -3.94084e-7 -1 0 -3.94084e-7 -1 0 -3.94084e-7 -1 0 -3.94084e-7 -1 0 1.97042e-7 1 0 1.97042e-7 1 0 1.97042e-7 1 0 1.97042e-7 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Cube-normals-array" count="168" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Cube-map1">
+          <float_array id="geom-Cube-map1-array" count="306">0.116137 0.4279521 0 0.3518332 0.1266466 0 0.9997755 0.1355856 0 0.1592809 0.04045138 0 0.157453 0.1260147 0 0.1266469 0.1091118 0 0.2831727 0.1592804 0 0.4902587 0.4518881 0 2.24377e-4 0.50781 0 0.2067819 0.5253869 0 0.4953357 0.4514393 0 0.4953358 0.2045753 0 0.8815423 0.1758923 0 0.2429458 0.4518881 0 0.6179988 0.1355856 0 0.4484155 0.393664 0 0.494887 0.3471924 0 0.6179988 0.1758921 0 0.6013196 0.1758921 0 0.6013196 0.1355856 0 0.9997755 0.1758922 0 0.1105668 0.37636 0 0.4424111 2.24377e-4 0 0.1251763 2.24377e-4 0 0.1120041 0.4851008 0 0.1476338 0.4494711 0 0.2753919 0.4514393 0 0.4898099 0.6584456 0 0.6968161 0.6987522 0 0.2424971 0.2014861 0 0.006690531 0.4855495 0 0.007008872 0.48613 0 0.2291751 0.2759952 0 0.4830867 0.1355856 0 0.1233482 0.1644455 0 0.1857992 0.5078098 0 0.1919177 0.4856564 0 0.4898101 0.6588944 0 0.7299507 0.1351368 0 0.07637443 0.4494712 0 0.1503294 0.3548408 0 0.2813767 0.09107102 0 0.09107151 0.03865514 0 0.2429457 0.716329 0 0.8815423 0.1355856 0 0.2429458 0.6584455 0 0.4902587 0.6987522 0 0.2067823 0.524938 0 0.2067823 0.5082587 0 2.24377e-4 0.525387 0 2.24377e-4 0.508259 0 0.4830867 2.24377e-4 0 0.1146997 0.3192112 0 0.2429458 0.699201 0 0.03432896 0.2399162 0 0.2753919 0.2429459 0 0.2429458 0.2753919 0 0.4442072 0.2424971 0 0.3687361 0.1574527 0 0.4071669 0.123348 0 0.4826379 0.03432913 0 0.2429458 0.4189933 0 0.36694 0.08924332 0 0.4826379 0.2083924 0 0.2429458 0.6588944 0 0.2429458 0.1251757 0 0.1218776 0.0555581 0 0.03585399 0.2403656 0 0.001773927 0.5037387 0 0.2083923 0.2399168 0 0.48981 0.6996498 0 0.07907008 0.3548409 0 0.4830867 0.1351368 0 2.24377e-4 0.1996892 0 2.24377e-4 0.2759953 0 0.1854925 0.507263 0 0.48981 0.6992009 0 0.864863 0.1758923 0 0.48981 0.716329 0 0.4830867 0.01690383 0 0.4898099 0.4518881 0 0.6968161 0.4518881 0 2.24386e-4 0.5420663 0 0.2429457 0.6996498 0 0.7299507 2.24488e-4 0 2.24394e-4 0.5249381 0 0.7299507 0.01690379 0 0.422501 0.3471925 0 0.3471926 0.3796386 0 0.4484154 0.3007209 0 0.368931 0.3471925 0 0.3147464 0.3471926 0 0.3471925 0.3147465 0 0.08924356 0.1242185 0 0.864863 0.1355856 0 0.6135688 0.2045752 0 0.6135688 0.4514393 0 0.2067819 0.5420662 0 0.1902347 0.4897698 0 0.4830867 0.1758922 0 0.2982795 0.1218771 0 0.1935454 0.2403655 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Cube-map1-array" count="102" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Cube-vertices">
+          <input semantic="POSITION" source="#geom-Cube-positions"/>
+        </vertices>
+        <triangles material="Material" count="84">
+          <input semantic="VERTEX" source="#geom-Cube-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Cube-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Cube-map1" offset="2" set="0"/>
+          <p>31 0 87 19 1 89 2 2 16 2 2 16 10 3 15 31 0 87 26 4 90 14 5 88 6 6 91 6 6 91 23 7 92 26 4 90 9 8 73 13 9 93 5 10 34 5 10 34 1 11 54 9 8 73 19 12 55 23 13 92 6 14 91 6 14 91 2 15 56 19 12 55 11 16 57 15 17 58 7 18 59 7 18 59 3 19 63 11 16 57 21 20 62 17 21 22 3 22 60 3 22 60 7 23 59 21 20 62 2 24 61 6 25 91 14 26 88 14 26 88 10 27 26 2 24 61 0 28 67 4 29 52 12 30 71 12 30 71 8 31 74 0 28 67 21 32 62 7 33 59 15 34 58 15 34 58 24 35 1 21 32 62 17 36 41 29 37 100 11 38 6 11 38 6 3 39 65 17 36 41 0 40 24 8 41 39 28 42 0 28 42 0 16 43 25 0 40 24 31 44 87 26 45 90 23 46 92 23 46 92 19 47 89 31 44 87 15 48 58 11 49 6 29 50 100 29 50 100 24 51 1 15 48 58 24 52 1 29 53 100 17 54 41 17 54 41 21 55 62 24 52 1 4 56 52 20 57 40 25 58 21 25 58 21 12 59 71 4 56 52 14 60 88 26 61 90 31 62 87 31 62 87 10 63 15 14 60 88 4 64 52 0 65 101 16 66 32 16 66 32 20 67 40 4 64 52 30 68 66 18 69 3 22 70 4 22 70 4 27 71 5 30 68 66 1 72 69 5 73 34 22 74 4 22 74 4 18 75 29 1 72 69 9 76 42 30 77 66 27 78 5 27 78 5 13 79 93 9 76 42 13 80 93 27 81 5 22 82 4 22 82 4 5 83 34 13 80 93 12 84 71 25 85 21 28 86 0 28 86 0 8 87 39 12 84 71 9 88 42 1 89 23 18 90 3 18 90 3 30 91 66 9 88 42 25 92 21 20 93 40 16 94 25 16 94 25 28 95 0 25 92 21 36 96 14 37 97 94 4 98 77 4 98 77 5 99 17 36 96 14 39 100 95 38 101 96 44 102 10 44 102 10 47 103 11 39 100 95 36 104 14 5 105 17 33 106 18 33 106 18 38 107 19 36 104 14 7 108 78 6 109 43 34 110 83 34 110 83 35 111 70 7 108 78 5 112 51 4 113 84 32 114 86 32 114 86 33 115 79 5 112 51 37 116 97 7 117 82 35 118 49 35 118 49 39 119 9 37 116 97 4 120 77 37 121 94 39 122 44 39 122 44 32 123 12 4 120 77 6 124 50 36 125 48 38 126 47 38 126 47 34 127 85 6 124 50 34 128 28 38 129 46 39 130 7 39 130 7 35 131 81 34 128 28 6 132 13 7 133 80 37 134 27 37 134 27 36 135 45 6 132 13 50 136 35 51 137 8 42 138 68 42 138 68 43 139 75 50 136 35 52 140 35 53 141 36 41 142 98 41 142 98 43 143 75 52 140 35 54 144 30 55 145 36 41 146 98 41 146 98 40 147 31 54 144 30 56 148 8 57 149 30 40 150 31 40 150 31 42 151 68 56 148 8 44 152 53 45 153 64 46 154 37 46 154 37 47 155 76 44 152 53 33 156 79 32 157 86 46 158 38 46 158 38 45 159 72 33 156 79 38 160 19 33 161 18 45 162 99 45 162 99 44 163 33 38 160 19 32 164 12 39 165 44 47 166 2 47 166 2 46 167 20 32 164 12</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="Brown-Oak-Wood-Texture-Background-480x345_jpg">
+      <init_from>./images/0_Brown-Oak-Wood-Texture-Background-480x345.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Cube" name="Cube">
+        <matrix>12.75013 0 0 0 0 12.75013 4.43716e-6 0 0 -2.07726e-6 27.23508 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Cube">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material" target="#Material-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows sid="cast_shadows" type="bool">1</cast_shadows>
+            <receive_shadows sid="receive_shadows" type="bool">1</receive_shadows>
+            <primary_visibility sid="primary_visibility" type="bool">1</primary_visibility>
+            <secondary_visibility sid="secondary_visibility" type="bool">1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
