@@ -1,0 +1,85 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="author" content="Stefanos Kaltsis">
+  	<title>Login: Chat Web App</title>
+  	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<script src="lib/three.min.js" type="text/javascript"></script>
+	<script src="lib/ColladaLoader.js" type="text/javascript"></script>
+	<script src="js/index.js" type="text/javascript"></script>
+</body>
+</html>
+
+<script src="js/index.js" type="text/javascript"></script>
+
+<body onload="addSendEvent()">
+	<div class="container">
+		<div class="outer_container_function">
+			<div class="container_function">
+				<a href="#/" class="function" id="register_form">Register</a>
+			</div>
+			<div class="container_function">
+				<a href="#/" class="function" id="login_form">Login</a>
+			</div>
+		</div>
+		<div class="container_template">
+			<object type="text/html" id="formContainer" data="components/loginForm.html"></object>
+		</div>
+	</div>-->
+	<!-- three.js Demo - Loading a 3D Model. Collada File Format. -->
+<!-- three.js Demo - Loading a 3D Model. Collada File Format. -->
+<!-- Additional Notes: Uses separate .js and .xml files. -->
+<!-- Version: 3.0 -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+    	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+		<title>three.js Demo - Loading a 3D Model. Collada File Format.</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!-- Here we include the three.js JavaScript files. -->
+		<script type="text/javascript" src="lib/three.min.js"></script>
+		<!-- Here we include the three.js stats library. -->
+		<script type="text/javascript" src="lib/stats.min.js"></script>
+		<!-- Here we include the three.js fly controls library. -->
+		<script type="text/javascript" src="lib/FirstPersonControls.js"></script>
+
+		<!-- Include the three.js libraries to handle the animations. -->
+		<script src="lib/Animation.js"></script>
+		<script src="lib/AnimationHandler.js"></script>
+		<script src="lib/KeyFrameAnimation.js"></script>
+
+		<!-- Here we include the three.js Collada Model loader. -->
+		<script type="text/javascript" src="lib/ColladaLoader.js"></script>
+		<!-- Here we include the our JavaScript files. You can include multiple files. -->
+
+
+		<!-- Working Files. -->
+
+		<!--Load XML functions-->
+		<script type="text/javascript" src="js/handleDescriptions.js"></script>
+
+		<!--Load models-->
+		<script type="text/javascript" src="js/loadModels.js"></script>
+
+		<!--Load lights-->
+		<script type="text/javascript" src="js/loadLights.js"></script>
+
+		<!-- The files can have any name. -->
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
+	<body>
+		<div id="myDivContainer"></div>
+
+		<div id="wrapper">
+			<div id="log">
+				<div id="log1"></div>
+				<div id="log2"></div>
+				<div id="log3"></div>
+			</div>
+		</div>
+	</body>
+</html>
