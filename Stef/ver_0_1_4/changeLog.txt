@@ -1,0 +1,3 @@
+-First prototype version
+-Models and lights positioned
+-Liths need more work, as some objects do not have lighting (switch, one side of the lamp)
