@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    height:100%;
+    width: 100%;
+    overflow: hidden;
+}
+#wrapper {
+
+    position: absolute;
+    top:0px;
+    width:100%;
+    /*overflow:auto;*/
+}
+#log {
+    display: block-inline;
+    height: 50px;
+    width: 700px;
+    float: right;
+    background-color: gray;
+    z-index: 999;
+    opacity: 0.8;
+    border-bottom-left-radius:5px;
+    font-size: 20px;
+    font-weight: bold;
+}
