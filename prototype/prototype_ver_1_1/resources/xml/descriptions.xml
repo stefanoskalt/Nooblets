@@ -1,0 +1,55 @@
+<?xml version = "1.0"?>
+<Obect-Description>
+    <object>
+        <name>Knife</name>
+        <description>A kitchen knife, about 20 cm in lenght and 4cm in width. You can clearly see the blood on it, most of it has dried out</description>
+    </object>
+    <object>
+    	<name>Table</name>
+    	<description>Old coffee table</description>
+    </object>
+    <object>
+    	<name>Sofa</name>
+    	<description>Luxurious sofa, it looks quite worn</description>
+    </object>
+	<object>
+    	<name>TV</name>
+    	<description>The TV is curently standing on the table with its screen smashed it, the impact area seems to be round</description>
+    </object>
+	<object>
+    	<name>Carpet</name>
+    	<description>The carpet is brown and is decorated with some intricate designs, a large blood stain can easily be seen where the body was found </description>
+    </object>
+	<object>
+    	<name>Rubish Bin</name>
+    	<description>A blue rubish bin, there is some trash in it</description>
+    </object>
+	<object>
+    	<name>Window</name>
+    	<description>It's a window, it's still sunny outside</description>
+    </object>
+	<object>
+    	<name>Chair</name>
+    	<description>A rustic chair, its still warm</description>
+    </object>
+	<object>
+    	<name>Door</name>
+    	<description>It's a door, it looks quite worn and there seems to be some superficial damage on it</description>
+    </object>
+	<object>
+    	<name>Sofa Blood Stains</name>
+    	<description>There are a few small blood stains on this sofa, nothing too excessive, it's quite dry</description>
+    </object>
+	<object>
+    	<name>Carpet Blood Stains</name>
+    	<description>The blood stain is very large and some of the blood has not dried out, this looks like where the victim bled out</description>
+    </object>
+	<object>
+    	<name>Table Blood Stains</name>
+    	<description>You can see small blood stains on the table</description>
+    </object>
+    <object>
+    	<name>Ceiling Fan</name>
+    	<description>The fan provides some very needed cooling in this room</description>
+    </object>
+</Obect-Description>
