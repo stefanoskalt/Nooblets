@@ -6,8 +6,8 @@
       <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.6;  Revision: 62</authoring_tool>
       <source_data>file:///C:/Users/User/Desktop/Door%20to%20make%20animations/doorwithAnimation2.max</source_data>
     </contributor>
-    <created>2018-04-18T02:42:12</created>
-    <modified>2018-04-18T02:42:12</modified>
+    <created>2018-04-19T16:28:37</created>
+    <modified>2018-04-19T16:28:37</modified>
     <unit name="inch" meter="0.0254"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -144,16 +144,16 @@
         </technique>
       </extra>
     </effect>
-    <effect id="_7_-_Default">
+    <effect id="_8_-_Default">
       <profile_COMMON>
-        <newparam sid="darkGreyDoorHandle_png-surface">
+        <newparam sid="__darkGreyDoorHandle_png-surface">
           <surface type="2D">
-            <init_from>darkGreyDoorHandle_png</init_from>
+            <init_from>__darkGreyDoorHandle_png</init_from>
           </surface>
         </newparam>
-        <newparam sid="darkGreyDoorHandle_png-sampler">
+        <newparam sid="__darkGreyDoorHandle_png-sampler">
           <sampler2D>
-            <source>darkGreyDoorHandle_png-surface</source>
+            <source>__darkGreyDoorHandle_png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -165,7 +165,7 @@
               <color>0.5882353 0.5882353 0.5882353 1</color>
             </ambient>
             <diffuse>
-              <texture texture="darkGreyDoorHandle_png-sampler" texcoord="CHANNEL1"/>
+              <texture texture="__darkGreyDoorHandle_png-sampler" texcoord="CHANNEL1"/>
             </diffuse>
             <specular>
               <color>0 0 0 1</color>
@@ -218,8 +218,8 @@
     <material id="_2_-_Default-material" name="_2_-_Default">
       <instance_effect url="#_2_-_Default"/>
     </material>
-    <material id="_7_-_Default-material" name="_7_-_Default">
-      <instance_effect url="#_7_-_Default"/>
+    <material id="_8_-_Default-material" name="_8_-_Default">
+      <instance_effect url="#_8_-_Default"/>
     </material>
   </library_materials>
   <library_geometries>
@@ -344,7 +344,7 @@
         <vertices id="geom-FrontHandle1-vertices">
           <input semantic="POSITION" source="#geom-FrontHandle1-positions"/>
         </vertices>
-        <triangles material="_7_-_Default_1" count="424">
+        <triangles material="_8_-_Default_1" count="424">
           <input semantic="VERTEX" source="#geom-FrontHandle1-vertices" offset="0"/>
           <input semantic="NORMAL" source="#geom-FrontHandle1-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#geom-FrontHandle1-map1" offset="2" set="0"/>
@@ -387,7 +387,7 @@
         <vertices id="geom-BackHandle1-vertices">
           <input semantic="POSITION" source="#geom-BackHandle1-positions"/>
         </vertices>
-        <triangles material="_7_-_Default" count="424">
+        <triangles material="_8_-_Default" count="424">
           <input semantic="VERTEX" source="#geom-BackHandle1-vertices" offset="0"/>
           <input semantic="NORMAL" source="#geom-BackHandle1-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#geom-BackHandle1-map1" offset="2" set="0"/>
@@ -412,8 +412,8 @@
     <image id="retina_wood_-_darker_png">
       <init_from>./images/0_retina_wood%20-%20darker.png</init_from>
     </image>
-    <image id="darkGreyDoorHandle_png">
-      <init_from>./images/2_darkGreyDoorHandle.png</init_from>
+    <image id="__darkGreyDoorHandle_png">
+      <init_from>./images/2_2_darkGreyDoorHandle.png</init_from>
     </image>
   </library_images>
   <library_visual_scenes>
@@ -480,7 +480,7 @@
           <instance_geometry url="#geom-FrontHandle1">
             <bind_material>
               <technique_common>
-                <instance_material symbol="_7_-_Default_1" target="#_7_-_Default-material">
+                <instance_material symbol="_8_-_Default_1" target="#_8_-_Default-material">
                   <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
                 </instance_material>
               </technique_common>
@@ -500,7 +500,7 @@
           <instance_geometry url="#geom-BackHandle1">
             <bind_material>
               <technique_common>
-                <instance_material symbol="_7_-_Default" target="#_7_-_Default-material">
+                <instance_material symbol="_8_-_Default" target="#_8_-_Default-material">
                   <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
                 </instance_material>
               </technique_common>
