@@ -1,0 +1,2 @@
+-Implemented new animation functionality for playing specifc parts of it as clips
+-Documentation update to reflect the change
