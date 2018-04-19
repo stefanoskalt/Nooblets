@@ -260,6 +260,25 @@ function loadAllModels() {
         },
         'scale': 1.0
     };
+	
+	 var loadDrawers = {
+        'modelPath': 'models/animation/drawers.dae',
+        'collision': true,
+        'interaction': true,
+        'description': false,
+        'animation': {
+            'autoplay': false,
+            'loop': false,
+			'clips': [[0,1.0], [1.0,3.1]]
+        },
+        'name': "Drawers",
+        'position': {
+            'x': 0,
+            'y': 0,
+            'z': 0
+        },
+        'scale': 0.5
+    };
 
     loadModel(loadDoor1);
     loadModel(loadAnime);
@@ -275,5 +294,5 @@ function loadAllModels() {
     loadModel(loadDoor2);
     loadModel(loadCoffeeTable);
     loadModel(loadCarpet);
-
+    loadModel(loadDrawers);
 }

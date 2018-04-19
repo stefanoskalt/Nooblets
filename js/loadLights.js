@@ -167,7 +167,7 @@ function loadAllLights(){
 	}
 	var AmbientLight = { // works well
 		'type' : 'AmbientLight',
-		'intensity' : 0.01
+		'intensity' : 0.1
 	}
 
 
