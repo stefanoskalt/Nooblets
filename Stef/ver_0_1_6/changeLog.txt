@@ -1,0 +1,3 @@
+-Bug fixes regarding the animation system not working corectly, or skipping clips
+-Dynamix conversation system impelemented
+-conversation.xml file added gholding the conversation for an item

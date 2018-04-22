@@ -10,8 +10,10 @@ function loadAllModels() {
     var loadDoor1 = {
         'modelPath': 'models/doortx.dae',
         'collision': true,
-        'description': true,
-        'name': 'Door',
+        'description': false,
+        'interaction': true,
+        'conversation':false,
+        'name': 'Witness',
         'position': {
             'x': 111,
             'y': -37,
@@ -40,6 +42,10 @@ function loadAllModels() {
     var loadCarpet = {
         'modelPath': 'models/carpet.dae',
         'collision': false,
+        'interaction': true,
+        'conversation': true,
+        'description': true,
+        'name': "Carpet",
         'position': {
             'x': -15,
             'y': -68.8,
@@ -81,6 +87,8 @@ function loadAllModels() {
         'modelPath': 'models/tv_stand.dae',
         'collision': true,
         'description': true,
+        'conversation': true,
+        'interaction':true,
         'name': 'TV',
         'position': {
             'x': 70,
@@ -121,7 +129,7 @@ function loadAllModels() {
         },
         'scale': 1.8
     };
-	var loadChair = {
+    var loadChair = {
         'modelPath': 'models/BestChair.dae',
         'collision': true,
         'description': true,
@@ -194,7 +202,7 @@ function loadAllModels() {
     var loadAnime = {
         'modelPath': 'models/animation/fantx.dae',
         'collision': true,
-        'interaction': true,
+        'interaction': false,
         'description': true,
         'animation': {
             'autoplay': true,
@@ -216,7 +224,7 @@ function loadAllModels() {
         'animation': {
             'autoplay': false,
             'loop': false,
-            'clips': [[0,0.6], [0.6,1.2]]
+            'clips': [[0,0.5], [0.5,1.0]]
         },
         'trigger': {
             'animationTrigger': "Ceiling Fan"
@@ -242,7 +250,7 @@ function loadAllModels() {
         'animation': {
             'autoplay': false,
             'loop': false,
-            'clips': [[0,0.6], [0.6,1.2]]
+            'clips': [[0,0.5], [0.5,1.0]]
         },
         'trigger': {
             'animationTrigger': "Ceiling Fan"
@@ -260,8 +268,8 @@ function loadAllModels() {
         },
         'scale': 1.0
     };
-	
-	 var loadDrawers = {
+
+     var loadDrawers = {
         'modelPath': 'models/animation/drawers.dae',
         'collision': true,
         'interaction': true,
@@ -269,7 +277,7 @@ function loadAllModels() {
         'animation': {
             'autoplay': false,
             'loop': false,
-			'clips': [[0,1.0], [1.0,3.1]]
+            'clips': [[0,1.0], [1.0,3.3]]
         },
         'name': "Drawers",
         'position': {
@@ -294,5 +302,5 @@ function loadAllModels() {
     loadModel(loadDoor2);
     loadModel(loadCoffeeTable);
     loadModel(loadCarpet);
-    loadModel(loadDrawers);
+    //loadModel(loadDrawers);
 }

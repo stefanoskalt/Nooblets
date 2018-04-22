@@ -1,0 +1,33 @@
+<?xml version = "1.0"?>
+<Obect-Description>
+    <Person>
+    	<name>Witness</name>
+    	<conversation>
+			<item>
+				<name>TV</name>
+				<dialogue>TVs are bigly bad. True story folks</dialogue>
+			</item>
+			<item>
+				<name>Carpet</name>
+				<dialogue>Carpet has some blood stains</dialogue>
+			</item>
+			<item>
+				<name>TV+Carpet</name>
+				<dialogue>TV and Carpet has some blood stainsTV and Carpet has some blood stains TV and Carpet has some blood stains TV and Carpet has some blood stains</dialogue>
+			</item>
+    	</conversation>
+    </Person>
+    <Person>
+    	<name>Police Officer</name>
+    	<conversation>
+    		<item>
+				<name>Knife</name>
+				<dialogue>Knives are bad, kids</dialogue>
+			</item>
+			<item>
+				<name>TV</name>
+				<dialogue>TVs are bigly good. True story folks</dialogue>
+			</item>
+    	</conversation>
+    </Person>
+</Obect-Description>
