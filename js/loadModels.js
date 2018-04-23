@@ -302,5 +302,5 @@ function loadAllModels() {
     loadModel(loadDoor2);
     loadModel(loadCoffeeTable);
     loadModel(loadCarpet);
-    //loadModel(loadDrawers);
+    loadModel(loadDrawers);
 }
