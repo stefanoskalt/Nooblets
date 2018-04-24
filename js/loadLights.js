@@ -167,18 +167,60 @@ function loadAllLights(){
 	}
 	var AmbientLight = { // works well
 		'type' : 'AmbientLight',
-		'intensity' : 0.1
+		'intensity' : 1
 	}
 
-
-
-
-
-
-
-
-
-
+	var RoomLight = {
+		'type' : 'PointLight',
+		'distance' : 150,
+		'size' : 100,
+		"intensity" : 1,
+		'size': 0,
+        'position': {
+			'x': 0,
+			'y': 0,
+			'z': -500
+	}
+	}
+	
+		var RoomLight2 = {
+		'type' : 'PointLight',
+		'distance' : 150,
+		'size' : 100,
+		"intensity" : 1,
+		'size': 0,
+        'position': {
+			'x': 0,
+			'y': 0,
+			'z': -1000
+	}
+	}
+	
+		var RoomLight3 = {
+		'type' : 'PointLight',
+		'distance' : 150,
+		'size' : 100,
+		"intensity" : 1,
+		'size': 0,
+        'position': {
+			'x': 0,
+			'y': 0,
+			'z': -750
+	}
+	}
+	
+		var RoomLight4 = {
+		'type' : 'PointLight',
+		'distance' : 150,
+		'size' : 100,
+		"intensity" : 1,
+		'size': 0,
+        'position': {
+			'x': 0,
+			'y': 0,
+			'z': -250
+	}
+	}
 
 	//Create and load all the above lights
 	createLight(PointLight1);
@@ -190,4 +232,8 @@ function loadAllLights(){
 	createLight(PointLightTv);
 	createLight(PointLightSofa);
 	createLight(AmbientLight);
+	createLight(RoomLight);
+	createLight(RoomLight2);
+	createLight(RoomLight3);
+	createLight(RoomLight4);
 }

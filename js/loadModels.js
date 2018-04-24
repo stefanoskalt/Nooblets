@@ -103,10 +103,10 @@ function loadAllModels() {
         'scale': 2.3
     };
     var loadLivingRoom = {
-        'modelPath': 'models/livingroomtx.dae',
+        'modelPath': 'models/two_rooms.dae',
         'collision': true,
         'position': {
-            'x': 110,
+            'x': 0,
             'y': -36,
             'z': 0
         },
@@ -288,19 +288,19 @@ function loadAllModels() {
         'scale': 0.5
     };
 
-    loadModel(loadDoor1);
-    loadModel(loadAnime);
-    loadModel(loadSwitch);
-    loadModel(loadSwitch2);
-    loadModel(loadBin);
-    loadModel(loadSofa);
-    loadModel(loadTv);
+    //loadModel(loadDoor1);
+    //loadModel(loadAnime);
+    //loadModel(loadSwitch);
+    //loadModel(loadSwitch2);
+    //loadModel(loadBin);
+    //loadModel(loadSofa);
+    //loadModel(loadTv);
     loadModel(loadLivingRoom);
-    loadModel(loadChair);
-    loadModel(loadLamp);
-    loadModel(loadTable);
-    loadModel(loadDoor2);
-    loadModel(loadCoffeeTable);
-    loadModel(loadCarpet);
-    loadModel(loadDrawers);
+    //loadModel(loadChair);
+    //loadModel(loadLamp);
+    //loadModel(loadTable);
+    //loadModel(loadDoor2);
+    //loadModel(loadCoffeeTable);
+    //loadModel(loadCarpet);
+    //loadModel(loadDrawers);
 }
