@@ -103,14 +103,16 @@ function loadAllModels() {
         'scale': 2.3
     };
     var loadLivingRoom = {
-        'modelPath': 'models/two_rooms.dae',
+        'modelPath': 'models/two_rooms2.dae',
         'collision': true,
         'position': {
             'x': 0,
             'y': -36,
             'z': 0
         },
-        'scale': 1.0
+        'scaleX': 1.0,
+        'scaleY': 1.0,
+        'scaleZ': 0.5,
     };
     var loadChair1 = {
         'modelPath': 'models/ChairWithTexturesDAE.dae',

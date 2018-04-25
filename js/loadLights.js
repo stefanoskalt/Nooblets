@@ -167,7 +167,7 @@ function loadAllLights(){
 	}
 	var AmbientLight = { // works well
 		'type' : 'AmbientLight',
-		'intensity' : 1
+		'intensity' : 0.5
 	}
 
 	var RoomLight = {

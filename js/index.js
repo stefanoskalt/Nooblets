@@ -989,11 +989,22 @@ function loadModel(toLoadModelArray) {
             }
         }
 
-
         // Scale your model to the correct size.
-        toLoadModel.scale.x = toLoadModelArray.scale;
-        toLoadModel.scale.y = toLoadModelArray.scale;
-        toLoadModel.scale.z = toLoadModelArray.scale;
+	if (toLoadModelArray.hasOwnProperty('scaleX')){
+		toLoadModel.scale.x = toLoadModelArray.scaleX;
+	}
+	if (toLoadModelArray.hasOwnProperty('scaleY')){
+		toLoadModel.scale.y = toLoadModelArray.scaleY;
+	}
+	if (toLoadModelArray.hasOwnProperty('scaleZ')){
+		toLoadModel.scale.z = toLoadModelArray.scaleZ;
+	}
+	
+	if (toLoadModelArray.hasOwnProperty('scale')){
+		toLoadModel.scale.x = toLoadModelArray.scale;
+		toLoadModel.scale.y = toLoadModelArray.scale;
+		toLoadModel.scale.z = toLoadModelArray.scale;
+	}
         toLoadModel.updateMatrix();
 
         //if collision is set to true, then push the object to array holding
