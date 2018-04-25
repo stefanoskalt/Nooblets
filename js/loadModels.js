@@ -15,9 +15,9 @@ function loadAllModels() {
         'conversation':false,
         'name': 'Witness',
         'position': {
-            'x': 111,
+            'x': 136,
             'y': -37,
-            'z': 6
+            'z': -89
         },
         'scale': 1.04
 
@@ -47,9 +47,9 @@ function loadAllModels() {
         'description': true,
         'name': "Carpet",
         'position': {
-            'x': -15,
+            'x': -70,
             'y': -68.8,
-            'z': -69
+            'z': -100
         },
         'rotate': {
             'x': 0,
@@ -62,9 +62,9 @@ function loadAllModels() {
         'modelPath': 'models/lamptx.dae',
         'collision': true,
         'position': {
-            'x': -106,
+            'x': 40,
             'y': -8,
-            'z': 77
+            'z': 20
         },
         'scale': 0.6
 
@@ -77,9 +77,9 @@ function loadAllModels() {
         'description': true,
         'name': 'Rubish Bin',
         'position': {
-            'x': 70,
-            'y': -23,
-            'z': 110
+            'x': -120,
+            'y': -22,
+            'z': 20
         },
         'scale': 1.4
     };
@@ -91,13 +91,13 @@ function loadAllModels() {
         'interaction':true,
         'name': 'TV',
         'position': {
-            'x': 70,
+            'x': -80,
             'y': -7.5,
-            'z': -70
+            'z': -210
         },
         'rotate': {
             'x': 0,
-            'y': 90,
+            'y': 180,
             'z': 0
         },
         'scale': 2.3
@@ -137,13 +137,13 @@ function loadAllModels() {
         'description': true,
         'name': 'Chair',
         'position': {
-            'x': -125,
+            'x': 60,
             'y': -21,
-            'z': 48
+            'z': -10
         },
         'rotate': {
             'x': 0,
-            'y': 0,
+            'y': -90,
             'z': 0
         },
         'scale': 0.3
@@ -157,9 +157,15 @@ function loadAllModels() {
             'animationTrigger': "Ceiling Fan"
         },
         'position': {
-            'x': -105,
+            'x': 60,
             'y': -35,
-            'z': 60
+            'z': 10
+        },
+		
+		'rotate': {
+            'x': 0,
+            'y': 90,
+            'z': 0
         },
         'scale': 1.7
     };
@@ -169,9 +175,9 @@ function loadAllModels() {
         'description': false,
         'name': 'Coffee Table',
         'position': {
-            'x': -50,
+            'x': -70,
             'y': -35,
-            'z': -70
+            'z': -38
         },
         'scale': 0.45
     };
@@ -181,9 +187,15 @@ function loadAllModels() {
         'description': true,
         'name': 'Sofa',
         'position': {
-            'x': -100,
-            'y': -22,
-            'z': -65
+            'x': -70,
+            'y': -29,
+            'z': 20
+        },
+		
+		'rotate': {
+            'x': 0,
+            'y': 90,
+            'z': 0
         },
 
         'scale': 0.5
@@ -213,8 +225,8 @@ function loadAllModels() {
         'name': "Ceiling Fan",
         'position': {
             'x': 0,
-            'y': 54,
-            'z': 0
+            'y': 55,
+            'z': -70
         },
         'scale': 1.0
     };
@@ -233,9 +245,9 @@ function loadAllModels() {
         },
         'name': "Light Switch",
         'position': {
-            'x': 100,
+            'x': 124,
             'y': 0,
-            'z': 40
+            'z': -60
         },
         'rotate': {
             'x': 0,
@@ -283,26 +295,80 @@ function loadAllModels() {
         },
         'name': "Drawers",
         'position': {
+            'x': 120,
+            'y': -18,
+            'z': -475
+        },
+		
+		'rotate': {
+            'x': 0,
+            'y': 90,
+            'z': 0
+        },
+        'scale': 0.7
+    };
+	
+	     var loadKnife = {
+        'modelPath': 'models/knife.dae',
+        'collision': false,
+        'interaction': true,
+        'description': true,
+
+        'name': "Knife",
+        'position': {
+            'x': 30,
+            'y': -8,
+            'z': 0
+        },
+		
+		'rotate': {
+            'x': 0,
+            'y': 0,
+            'z': 90
+        },
+        'scale': 1.0
+    };
+	
+	 var loadPhone = {
+        'modelPath': 'models/phone.dae',
+        'collision': false,
+        'interaction': true,
+        'description': true,
+
+        'name': "Phone",
+        'position': {
+            'x': 50,
+            'y': -8,
+            'z': 0
+        },
+		
+		'rotate': {
             'x': 0,
             'y': 0,
             'z': 0
         },
-        'scale': 0.5
+        'scale': 0.02
     };
 
-    //loadModel(loadDoor1);
-    //loadModel(loadAnime);
-    //loadModel(loadSwitch);
+    loadModel(loadDoor1);
+    loadModel(loadAnime);
+    loadModel(loadSwitch);
+	
     //loadModel(loadSwitch2);
-    //loadModel(loadBin);
-    //loadModel(loadSofa);
-    //loadModel(loadTv);
+	
+    loadModel(loadBin);
+    loadModel(loadSofa);
+    loadModel(loadTv);
     loadModel(loadLivingRoom);
-    //loadModel(loadChair);
-    //loadModel(loadLamp);
-    //loadModel(loadTable);
+    loadModel(loadChair);
+    loadModel(loadLamp);
+    loadModel(loadTable);
+	
     //loadModel(loadDoor2);
-    //loadModel(loadCoffeeTable);
-    //loadModel(loadCarpet);
-    //loadModel(loadDrawers);
+	
+    loadModel(loadCoffeeTable);
+    loadModel(loadCarpet);
+    loadModel(loadDrawers);
+	loadModel(loadKnife);
+	loadModel(loadPhone);
 }
