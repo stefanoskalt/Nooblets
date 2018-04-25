@@ -108,7 +108,7 @@ function loadAllModels() {
         'position': {
             'x': 0,
             'y': -36,
-            'z': 0
+            'z': 50
         },
         'scaleX': 1.0,
         'scaleY': 1.0,
