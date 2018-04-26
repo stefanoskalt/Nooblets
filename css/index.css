@@ -5,6 +5,15 @@ html, body {
     overflow: hidden;
 }
 
+#full {
+    width: 100%;
+    height: 100%;
+    background:rgba(255,255,255,0.5); 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100; /* Just to keep it at the very top */
+}
 #wrapper {
    pointer-events : none;
 
@@ -43,6 +52,30 @@ html, body {
     border-style: double;
     border-width: 1px;
     border-color: grey;
+
+}
+
+#endingContainer {
+    /*visibility: hidden;     /*Hidden by default, activated by javascript code*/
+    pointer-events : none;  /*Does not allow the element to block the game's nagivating cursor*/
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    padding: 5%;
+
+    top: 15%;
+    left: 20%;
+    bottom: : 30%;
+    right: : 30%;
+    background-color: #16243a;
+    border-radius: 5%;
+    opacity: 0.9;
+    font-size: 30px;
+    color: #999999;
+    border-style: double;
+    border-width: 1px;
+    border-color: grey;
+    text-align: center;
 
 }
 /*Classes for triggering visibility status of the message window
@@ -96,6 +129,15 @@ h3{
 #messageInfo{
     text-align: center;
     font-size: 15px;
+    padding-top:7px;
+    font-style: normal;
+    padding-bottom: 7px;
+
+}
+
+#endMessageInfo{
+    text-align: center;
+    font-size: 30px;
     padding-top:7px;
     font-style: normal;
     padding-bottom: 7px;

@@ -10,10 +10,10 @@ function loadAllModels() {
     var loadDoor1 = {
         'modelPath': 'models/doortx.dae',
         'collision': true,
-        'description': false,
+        'description': true,
         'interaction': true,
-        'conversation':false,
-        'name': 'Witness',
+        //'conversation':false,
+        'name': 'Door',
         'position': {
             'x': 136,
             'y': -37,
@@ -50,6 +50,7 @@ function loadAllModels() {
         'modelPath': 'models/carpet.dae',
         'collision': false,
         'interaction': true,
+        'clue': true,
         'conversation': true,
         'description': true,
         'name': "Carpet",
@@ -94,6 +95,7 @@ function loadAllModels() {
         'modelPath': 'models/tv_stand.dae',
         'collision': true,
         'description': true,
+        'clue': true,
         'conversation': true,
         'interaction':true,
         'name': 'TV',
@@ -361,8 +363,8 @@ function loadAllModels() {
         'modelPath': 'models/girl.dae',
         'collision': true,
         'interaction': true,
-        'conversation': true,
-        'description': false,
+        //'conversation': true,
+        //'description': false,
         'animation': {
             'autoplay': true,
             'loop': true

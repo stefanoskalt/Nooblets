@@ -639,6 +639,43 @@ function checkConversation(obj) {
                 objToShowConvo.message = "I have nothing to say at the moment. Come back later when you have gathered more clues";
             }
         }
+        var ending = false;
+        var countCorrect = 0;
+        var totalClues = 0;
+
+    	for (var i = 0; i < modelsInteraction.length; i++) {
+
+    		console.log(i);
+
+        	if ((modelsInteraction[i].clue == true) && (modelsInteraction[i].interactedByUser == true)){
+
+        		countCorrect += 1;
+        		console.log("countCorrect %d" , countCorrect);
+        		console.log("totalClues: %d" , totalClues);
+
+        	} if (modelsInteraction[i].clue == true){
+
+        		totalClues += 1;
+        		console.log("countCorrect %d" , countCorrect);
+        		console.log("totalClues: %d" , totalClues);
+        	}
+    	}
+
+    	if (countCorrect == totalClues){
+    		console.log("countCorrect %d" , countCorrect);
+        	console.log("totalClues: %d" , totalClues);
+    		ending = true;
+    		console.log(ending);
+
+        	var messageWindowEnd = document.getElementById('endingContainer');
+    		//console.log(document.getElementById("conversationContainer"));
+    		if (messageWindowEnd.classList.contains("notVisible")) {
+     		   console.log("should be visible");
+     		   messageWindowEnd.classList.add('visible');
+     		   messageWindowEnd.classList.remove('notVisible');
+    		}
+    	}
+
     }
     if (objToShowConvo.message !== "") {
         showMessage(objToShowConvo);
@@ -810,6 +847,9 @@ function init() {
                 closeMessage();
                 break;
 
+            case 82: //R key
+            case 114: //r key
+                location.reload(true);
         }
     }, false);
     /*------------------END DESCRIPTION FUNCTIONALITY------------------*/
@@ -987,6 +1027,12 @@ function loadModel(toLoadModelArray) {
             for (i = 0; i < toLoadModel.children.length; i += 1) {
                 toLoadModel.children[i].name = toLoadModelArray.name;
             }
+        }
+
+        if (toLoadModelArray.hasOwnProperty('clue')) {
+            toLoadModel.clue = toLoadModelArray.clue;
+        }else{
+            toLoadModel.clue = false;
         }
 
         // Scale your model to the correct size.
