@@ -407,13 +407,13 @@
   </library_lights>
   <library_images>
     <image id="circular-837510_1920_-_Copy_jpg">
-      <init_from>./images/1_circular-837510_1920%20-%20Copy.jpg</init_from>
+      <init_from>../images/1_circular-837510_1920%20-%20Copy.jpg</init_from>
     </image>
     <image id="retina_wood_-_darker_png">
-      <init_from>./images/0_retina_wood%20-%20darker.png</init_from>
+      <init_from>../images/0_retina_wood%20-%20darker.png</init_from>
     </image>
     <image id="__darkGreyDoorHandle_png">
-      <init_from>./images/2_2_darkGreyDoorHandle.png</init_from>
+      <init_from>../images/2_2_darkGreyDoorHandle.png</init_from>
     </image>
   </library_images>
   <library_visual_scenes>

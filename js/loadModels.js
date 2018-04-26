@@ -23,21 +23,28 @@ function loadAllModels() {
 
     };
     var loadDoor2 = {
-        'modelPath': 'models/doortx.dae',
+        'modelPath': 'models/animation/doorAnim.dae',
         'collision': true,
-        'description': true,
+        'interaction': true,
+        'description': false,
+        'animation': {
+            'autoplay': false,
+            'loop': false,
+            //'clips': [[0,3.5], [3.5,7]]
+            'clips': [[0.5,2], [4,5]]
+        },
         'name': 'Door',
         'position': {
-            'x': -23.5,
-            'y': -36.5,
-            'z': 143
+            'x': -3,
+            'y': -32.7,
+            'z': -224
         },
         'rotate': {
             'x': 0,
             'y': 90,
             'z': 0
         },
-        'scale': 1.04
+        'scale': 1.0
     };
     var loadCarpet = {
         'modelPath': 'models/carpet.dae',
@@ -153,9 +160,9 @@ function loadAllModels() {
         'collision': true,
         'description': true,
         'name': 'Table',
-        'trigger': {
-            'animationTrigger': "Ceiling Fan"
-        },
+        //'trigger': {
+        //    'animationTrigger': "Ceiling Fan"
+        //},
         'position': {
             'x': 60,
             'y': -35,
@@ -350,6 +357,49 @@ function loadAllModels() {
         'scale': 0.02
     };
 
+    var loadWitness = {
+        'modelPath': 'models/girl.dae',
+        'collision': true,
+        'interaction': true,
+        'conversation': true,
+        'description': false,
+        'animation': {
+            'autoplay': true,
+            'loop': true
+        },
+        'name': "Witness",
+        'position': {
+            'x': 85,
+            'y': -35,
+            'z': -160
+        },
+        'rotate': {
+            'x': 0,
+            'y': -35,
+            'z': 0
+        },
+        'scale': 1.3
+    };
+
+    var loadDeadBody = {
+        'modelPath': 'models/DeadBody.dae',
+        'collision': true,
+        'interaction': true,
+        'description': true,
+        'name': "DeadBody",
+        'position': {
+            'x': -20,
+            'y': -34,
+            'z': -100
+        },
+        'rotate': {
+            'x': 0,
+            'y': 105,
+            'z': 0
+        },
+        'scale': 1.5
+    };
+
     loadModel(loadDoor1);
     loadModel(loadAnime);
     loadModel(loadSwitch);
@@ -364,11 +414,14 @@ function loadAllModels() {
     loadModel(loadLamp);
     loadModel(loadTable);
 	
-    //loadModel(loadDoor2);
+    loadModel(loadDoor2);
 	
     loadModel(loadCoffeeTable);
     loadModel(loadCarpet);
     loadModel(loadDrawers);
 	loadModel(loadKnife);
 	loadModel(loadPhone);
+
+    loadModel(loadWitness);
+    loadModel(loadDeadBody);
 }
